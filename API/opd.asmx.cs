@@ -21,10 +21,10 @@ namespace hospitalproject.API
     {
         TextInfo pcase = new CultureInfo("en-US", false).TextInfo;
         [WebMethod]
-        public DataTable opdregistrationsearch(string sn, string patientid)
+        public DataTable opdregistrationsearch(string patientid)
         {
             {
-                return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from opdregistration where sn like'" + sn + "'and patientid like'" + patientid + "'");
+                return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from opdregistration where patientid like'" + patientid + "'");
             }
         }
         [WebMethod]
@@ -33,9 +33,9 @@ namespace hospitalproject.API
             SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into opdregistration(patientid,patientname,age,gender,date,mobilenumber,mobilenumber2,email,address,department,consultant,visittype,fee,height,weight,bloodpressure,temperature,remark) values('" + pcase.ToTitleCase(patientid) + "','" + patientname + "','" + age + "','" + gender + "','" + date + "','" + mobilenumber + "','" + mobilenumber2 + "','" + email + "','" + address + "', '" + department + "', '" + consultant + "', '" + visittype + "', '" + fee + "', '" + height + "', '" + weight + "', '" + bloodpressure + "', '" + temperature + "', '" + remark + "')");
         }
         [WebMethod]
-        public void opdregistrationdelete(string sn)
+        public void opdregistrationdelete(string patientid)
         {
-            SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from opdregistration where sn='" + sn + "'");
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from opdregistration where patientid='" + patientid + "'");
         }
     }
 }

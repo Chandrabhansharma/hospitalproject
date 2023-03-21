@@ -16,7 +16,7 @@ namespace hospitalproject.opd
         {
             if (!IsPostBack)
             {
-                dt = opddata.opdregistrationsearch("%", "%");
+                dt = opddata.opdregistrationsearch("%");
                 grddata.DataSource = dt;
                 grddata.DataBind();
             }
@@ -42,7 +42,7 @@ namespace hospitalproject.opd
             {
                 if (e.CommandName == "btnedt")
                 {
-                    dt = opddata.opdregistrationsearch(e.CommandArgument.ToString(), "%");
+                    dt = opddata.opdregistrationsearch(e.CommandArgument.ToString());
                     patientid.Text = dt.Rows[0]["patientid"].ToString();
                     patientname.Text = dt.Rows[0]["patientname"].ToString();
                     age.Text = dt.Rows[0]["age"].ToString();

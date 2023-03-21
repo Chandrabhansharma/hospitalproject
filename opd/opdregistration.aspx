@@ -93,7 +93,6 @@
                     <asp:BoundField HeaderText="Mobile Number(Alternate)" DataField="mobilenumber2" />
                     <asp:BoundField HeaderText="Email" DataField="email" />
                     <asp:BoundField HeaderText="Address" DataField="address" />
-                     <asp:BoundField HeaderText="Symptoms" DataField="symptoms" />
                     <asp:BoundField HeaderText="Department" DataField="department" />
                      <asp:BoundField HeaderText="Consultant" DataField="consultant" />
                     <asp:BoundField HeaderText="Visit Type" DataField="visittype" />
