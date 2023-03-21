@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="API\modules.asmx" />
+    <Content Include="API\opd.asmx" />
     <Content Include="dashboard.aspx" />
     <Content Include="default.aspx" />
     <Content Include="modules\charges.aspx" />
@@ -91,6 +93,15 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\modules.asmx.cs">
+      <DependentUpon>modules.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="API\opd.asmx.cs">
+      <DependentUpon>opd.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="API\SqlHelper.cs" />
     <Compile Include="dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
