@@ -10,7 +10,7 @@
                 <center><i class="fa fa-2x fa-gears"></i>
                 <div class="mt-2"> Modules</div></center>
             </a>
-             <a href="#" class="col-md-dashboard border p-3 ad">
+             <a href="../opd/opddashboard.aspx" class="col-md-dashboard border p-3 ad">
                 <center><i class="fa fa-2x fa-stethoscope"></i>
                 <div class="mt-2"> OPD</div></center>
             </a>
