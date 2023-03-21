@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="dashboard.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="modules\moduledashboard.aspx" />
     <Content Include="opd\opddashboard.aspx" />
     <Content Include="opd\opdregistration.aspx" />
     <Content Include="support\CSS\bootstrap.css" />
@@ -106,6 +107,20 @@
     <Compile Include="index.Master.designer.cs">
       <DependentUpon>index.Master</DependentUpon>
     </Compile>
+    <Compile Include="modules\module.master.cs">
+      <DependentUpon>module.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\module.master.designer.cs">
+      <DependentUpon>module.master</DependentUpon>
+    </Compile>
+    <Compile Include="modules\moduledashboard.aspx.cs">
+      <DependentUpon>moduledashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\moduledashboard.aspx.designer.cs">
+      <DependentUpon>moduledashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="opd\opd.master.cs">
       <DependentUpon>opd.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,6 +147,7 @@
   <ItemGroup>
     <Content Include="index.Master" />
     <Content Include="opd\opd.master" />
+    <Content Include="modules\module.master" />
     <None Include="packages.config" />
     <Content Include="support\fonts\fontawesome-webfont.eot" />
     <Content Include="support\fonts\fontawesome-webfont.ttf" />
