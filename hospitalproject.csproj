@@ -69,6 +69,11 @@
   <ItemGroup>
     <Content Include="dashboard.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="modules\charges.aspx" />
+    <Content Include="modules\city.aspx" />
+    <Content Include="modules\consultant.aspx" />
+    <Content Include="modules\disease.aspx" />
+    <Content Include="modules\hospital.aspx" />
     <Content Include="modules\moduledashboard.aspx" />
     <Content Include="opd\opddashboard.aspx" />
     <Content Include="opd\opdregistration.aspx" />
@@ -106,6 +111,41 @@
     </Compile>
     <Compile Include="index.Master.designer.cs">
       <DependentUpon>index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="modules\charges.aspx.cs">
+      <DependentUpon>charges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\charges.aspx.designer.cs">
+      <DependentUpon>charges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\city.aspx.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\city.aspx.designer.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\consultant.aspx.cs">
+      <DependentUpon>consultant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\consultant.aspx.designer.cs">
+      <DependentUpon>consultant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\disease.aspx.cs">
+      <DependentUpon>disease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\disease.aspx.designer.cs">
+      <DependentUpon>disease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\hospital.aspx.cs">
+      <DependentUpon>hospital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\hospital.aspx.designer.cs">
+      <DependentUpon>hospital.aspx</DependentUpon>
     </Compile>
     <Compile Include="modules\module.master.cs">
       <DependentUpon>module.master</DependentUpon>
