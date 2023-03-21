@@ -26,7 +26,7 @@ namespace hospitalproject.opd
         {
             try
             {
-                opddata.opdregistrationsave(patientid.Text, patientname.Text, age.Text, gender.SelectedValue, date.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, symptoms.Text, department.SelectedValue, consultant.SelectedValue, visitetype.SelectedValue, fee.SelectedValue, height.Text, weight.Text, bloodpressure.Text, temperature.Text, remark.Text);
+                opddata.opdregistrationsave(patientid.Text, patientname.Text, age.Text, gender.SelectedValue, date.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, department.SelectedValue, consultant.SelectedValue, visitetype.SelectedValue, fee.SelectedValue, height.Text, weight.Text, bloodpressure.Text, temperature.Text, remark.Text);
                 // Response.Write("Save Successfully !!!");
                 // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'Registration.aspx'})", true);
@@ -52,7 +52,6 @@ namespace hospitalproject.opd
                     mobilenumber2.Text = dt.Rows[0]["mobilenumber2"].ToString();
                     email.Text = dt.Rows[0]["email"].ToString();
                     address.Text = dt.Rows[0]["address"].ToString();
-                    symptoms.Text = dt.Rows[0]["symptoms"].ToString();
                     department.Text = dt.Rows[0]["department"].ToString();
                     consultant.Text = dt.Rows[0]["consultant"].ToString();
                     visitetype.Text = dt.Rows[0]["visittype"].ToString();

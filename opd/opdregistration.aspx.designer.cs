@@ -96,15 +96,6 @@ namespace hospitalproject.opd
         protected global::System.Web.UI.WebControls.TextBox address;
 
         /// <summary>
-        /// symptoms control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox symptoms;
-
-        /// <summary>
         /// department control.
         /// </summary>
         /// <remarks>
