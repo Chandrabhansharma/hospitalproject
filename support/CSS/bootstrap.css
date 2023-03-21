@@ -222,7 +222,7 @@ h1, .h1 {
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 5.5rem;
   }
 }
 
@@ -701,8 +701,9 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: 100%;
+    margin-top: -5px;
 }
 
 .img-thumbnail {

@@ -84,6 +84,8 @@
     <Content Include="support\CSS\sweetalert.min.css" />
     <Content Include="support\fonts\fontawesome-webfont.svg" />
     <Content Include="support\image\hospitallogo.jpg" />
+    <Content Include="support\image\login1.jpeg" />
+    <Content Include="support\image\logo1.jpeg" />
     <Content Include="support\JS\bootstrap.bundle.js" />
     <Content Include="support\JS\dataTables.min.js" />
     <Content Include="support\JS\jquery-3.3.1.min.js" />
