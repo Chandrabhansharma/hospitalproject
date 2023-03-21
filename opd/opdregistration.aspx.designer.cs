@@ -186,13 +186,13 @@ namespace hospitalproject.opd
         protected global::System.Web.UI.WebControls.TextBox remark;
 
         /// <summary>
-        /// Button1 control.
+        /// save control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button save;
 
         /// <summary>
         /// grddata control.
