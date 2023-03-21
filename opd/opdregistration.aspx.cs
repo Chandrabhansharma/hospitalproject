@@ -27,8 +27,6 @@ namespace hospitalproject.opd
             try
             {
                 opddata.opdregistrationsave(patientid.Text, patientname.Text, age.Text, gender.SelectedValue, date.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, department.SelectedValue, consultant.SelectedValue, visitetype.SelectedValue, fee.SelectedValue, height.Text, weight.Text, bloodpressure.Text, temperature.Text, remark.Text);
-                // Response.Write("Save Successfully !!!");
-                // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'opdregistration.aspx'})", true);
             }
             catch (Exception ex)
