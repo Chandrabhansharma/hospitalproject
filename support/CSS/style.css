@@ -1,0 +1,87 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+.title
+{
+    font-size:28px;
+    color:white;
+    float:left !important;
+}
+.navbar
+{
+    padding:0px !important;
+    font-weight:500;
+    font-size:1.2rem !important;
+}
+a{
+    text-decoration:none !important;
+}
+.navbg {
+   background-color: #317d7d;
+}
+.ad 
+{
+    text-decoration:none !important;
+}
+.ad div {
+    font-size:1.2rem;
+    color:maroon !important;
+}
+.ad:hover
+{
+    background-color:lightgoldenrodyellow;
+}
+.btn-clr {
+    background: rgb(23,43,43);
+    background: linear-gradient(90deg, rgba(23,43,43,1) 0%, rgba(60,113,113,1) 23%, rgba(85,159,159,1) 71%, rgba(102,191,191,1) 100%);
+}
+.btn {
+    border: 1px solid;
+    border-color: #EAA438;
+    border-color: whitesmoke;
+    border-radius: 0.2rem !important;
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+    transition: all .3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform .4s,background .4s;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    min-width: 60px;    
+    font-weight:600;
+    background: rgb(23,43,43);
+    background: linear-gradient(90deg, rgba(23,43,43,1) 0%, rgba(60,113,113,1) 23%, rgba(85,159,159,1) 71%, rgba(102,191,191,1) 100%);
+}
+
+    .btn:hover {
+        border: 1px solid;
+        border-color: lightgrey;
+        box-shadow: 0px 5px 10px rgba(214, 158, 66, 0.4);
+        color: #fff;
+        transform: translateY(-3px);
+        min-width: 60px;
+        background: rgb(23,43,43);
+        background: linear-gradient(90deg, rgba(23,43,43,1) 0%, rgba(60,113,113,1) 23%, rgba(85,159,159,1) 71%, rgba(102,191,191,1) 100%);
+    }
+
+.btn2 {
+    border: 1px solid;
+    border-color: #EAA438;
+    border-color: whitesmoke;
+    border-radius: 0.2rem !important;
+    padding-bottom: 3px !important;
+    padding-top: 3px !important;
+    transition: all .3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform .4s,background .4s;
+    transition: all 0.3s ease 0s;
+}
+
+    .btn2:hover {
+        border: 1px solid;
+        border-color: lightgrey;
+        box-shadow: 0px 5px 10px rgba(214, 158, 66, 0.4);
+        color: #fff;
+        transform: translateY(-3px);
+    }
