@@ -12,6 +12,7 @@
 <link href="support/CSS/Style.css" rel="stylesheet" />
 <title>Default Login</title>
  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 .logo1
 {
     float: left;
@@ -22,6 +23,7 @@
     max-width: 220px;
     display: table;
 }
+
     </style>
 </head>
     <body>
@@ -40,7 +42,7 @@
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
 
-                <form>
+               
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                       <img src="support/image/logo1.jpeg" alt="Max-width 100%" class="logo1"/>
@@ -50,25 +52,28 @@
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
                   <div class="form-outline mb-4">
-                    <input type="text" id="form2Example17" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example17">User Name</label>
+                   
+                       <asp:TextBox ID="username" required="username" runat="server" placeholder="User Name" CssClass="form-control"></asp:TextBox>
+
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="form2Example27" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example27">Password</label>
+                       <asp:TextBox ID="password" required="password" TextMode="Password" runat="server" placeholder="Password" CssClass="form-control"></asp:TextBox>
+                    
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                        <asp:Button ID="login" runat="server" Text="Login" CssClass="btn w-25 btn-success " OnClick="login_Click"/>
+
+                    
                   </div>
 
-                  <a class="small text-muted" href="#!">Forgot password?</a>
+           <!--       <a class="small text-muted" href="#!">Forgot password?</a>
                   <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!"
-                      style="color: #393f81;">Register here</a></p>
+                      style="color: #393f81;">Register here</a></p>-->
                   <a href="#!" class="small text-muted">Terms of use.</a>
                   <a href="#!" class="small text-muted">Privacy policy</a>
-                </form>
+               
 
               </div>
             </div>
@@ -79,6 +84,8 @@
   </div>
 </section>
    </form>
+    <script src="support/JS/bootstrap.bundle.js"></script>
+    <script src="support/JS/bootstrap.js"></script>
 </body>
 
 </html>

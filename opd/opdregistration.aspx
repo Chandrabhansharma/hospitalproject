@@ -39,9 +39,6 @@
                        <div class="col-md-3">
                            Address<asp:TextBox ID="address" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
-           <div class="col-md-3">
-                        Symptoms<asp:TextBox ID="symptoms" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
              <div class="col-md-3">
                            Department <asp:DropDownList ID="department" runat="server" CssClass="form-control"></asp:DropDownList>         
                         </div>
@@ -77,7 +74,7 @@
                     </div><div class="col-md-6"></div>
                         <div class="col-md-2 mt-1">
                             <br />
-<asp:Button ID="Button1" runat="server" Text="Save" OnClick="save_Click" CssClass="btn w-100" />
+<asp:Button ID="save" runat="server" Text="Save" OnClick="save_Click" CssClass="btn w-100" />
                         </div>
                     </div>
                 </div>
