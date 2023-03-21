@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="API\default.asmx" />
     <Content Include="API\modules.asmx" />
     <Content Include="API\opd.asmx" />
     <Content Include="dashboard.aspx" />
@@ -95,6 +96,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\default.asmx.cs">
+      <DependentUpon>default.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="API\modules.asmx.cs">
       <DependentUpon>modules.asmx</DependentUpon>
       <SubType>Component</SubType>
