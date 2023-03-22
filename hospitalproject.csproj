@@ -72,8 +72,6 @@
     <Content Include="API\opd.asmx" />
     <Content Include="modules\dashboard.aspx" />
     <Content Include="default.aspx" />
-    <Content Include="modules\charges.aspx" />
-    <Content Include="modules\city.aspx" />
     <Content Include="modules\consultant.aspx" />
     <Content Include="modules\disease.aspx" />
     <Content Include="modules\hospital.aspx" />
@@ -129,20 +127,6 @@
     </Compile>
     <Compile Include="index.Master.designer.cs">
       <DependentUpon>index.Master</DependentUpon>
-    </Compile>
-    <Compile Include="modules\charges.aspx.cs">
-      <DependentUpon>charges.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="modules\charges.aspx.designer.cs">
-      <DependentUpon>charges.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="modules\city.aspx.cs">
-      <DependentUpon>city.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="modules\city.aspx.designer.cs">
-      <DependentUpon>city.aspx</DependentUpon>
     </Compile>
     <Compile Include="modules\consultant.aspx.cs">
       <DependentUpon>consultant.aspx</DependentUpon>
