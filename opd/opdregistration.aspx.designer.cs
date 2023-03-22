@@ -15,22 +15,13 @@ namespace hospitalproject.opd
     {
 
         /// <summary>
-        /// registrationid control.
+        /// patientid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox registrationid;
-
-        /// <summary>
-        /// patientno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox patientno;
+        protected global::System.Web.UI.WebControls.TextBox patientid;
 
         /// <summary>
         /// patientname control.
@@ -105,22 +96,22 @@ namespace hospitalproject.opd
         protected global::System.Web.UI.WebControls.TextBox address;
 
         /// <summary>
-        /// doctorname control.
+        /// department control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList doctorname;
+        protected global::System.Web.UI.WebControls.DropDownList department;
 
         /// <summary>
-        /// specialization control.
+        /// consultant control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList specialization;
+        protected global::System.Web.UI.WebControls.DropDownList consultant;
 
         /// <summary>
         /// visitetype control.

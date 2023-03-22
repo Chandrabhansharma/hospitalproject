@@ -6,11 +6,8 @@
             <a href="opddashboard.aspx"> <i class="fa fa-arrow-left text-black"></i></a>Registration</div>
         <div class="col-md-12">
         <div class="row p-2">
-            <div class="col-md-3">
-       Registration ID<br /><asp:TextBox ID="registrationid" runat="server" CssClass="form-control"></asp:TextBox>
-       </div>
              <div class="col-md-3">
-       Patient No.<br /><asp:TextBox ID="patientno" runat="server" CssClass="form-control"></asp:TextBox>
+       Patient ID<br /><asp:TextBox ID="patientid" runat="server" CssClass="form-control"></asp:TextBox>
        </div>
             <div class="col-md-3">
        Patient Name<br /><asp:TextBox ID="patientname" runat="server" CssClass="form-control"></asp:TextBox>
@@ -43,10 +40,10 @@
                            Address<asp:TextBox ID="address" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
              <div class="col-md-3">
-                           Doctor Name<asp:DropDownList ID="doctorname" runat="server" CssClass="form-control"></asp:DropDownList>         
+                           Department <asp:DropDownList ID="department" runat="server" CssClass="form-control"></asp:DropDownList>         
                         </div>
              <div class="col-md-3">
-                            Specialization <asp:DropDownList ID="specialization" runat="server" CssClass="form-control"></asp:DropDownList>         
+                            Consultant <asp:DropDownList ID="consultant" runat="server" CssClass="form-control"></asp:DropDownList>         
                         </div>
              <div class="col-md-3">
                          Visit Type <asp:DropDownList ID="visitetype" runat="server" CssClass="form-control">
@@ -86,8 +83,7 @@
          <div class="row m-0 p-0 border-0 fw-bold table-responsive card-body">
             <asp:GridView ID="grddata" GridLines="None" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="grddata_PreRender" OnRowCommand="grddata_RowCommand" HeaderStyle-BackColor="Teal" HeaderStyle-ForeColor="White" runat="server" CssClass="table table-hover table-bordered">
                 <Columns>
-                          <asp:BoundField HeaderText="Registration ID" DataField="registrationid" />
-                    <asp:BoundField HeaderText="Patient No." DataField="patientno" />
+                    <asp:BoundField HeaderText="Patient ID" DataField="patientid" />
                     <asp:BoundField HeaderText="Patient Name" DataField="patientname" />
                      <asp:BoundField HeaderText="Age" DataField="age" />
                     <asp:BoundField HeaderText="Gender" DataField="gender" />
@@ -97,8 +93,8 @@
                     <asp:BoundField HeaderText="Mobile Number(Alternate)" DataField="mobilenumber2" />
                     <asp:BoundField HeaderText="Email" DataField="email" />
                     <asp:BoundField HeaderText="Address" DataField="address" />
-                    <asp:BoundField HeaderText="Doctor Name" DataField="doctorname" />
-                     <asp:BoundField HeaderText="Specialization" DataField="specialization" />
+                    <asp:BoundField HeaderText="Department" DataField="department" />
+                     <asp:BoundField HeaderText="Consultant" DataField="consultant" />
                     <asp:BoundField HeaderText="Visit Type" DataField="visittype" />
                      <asp:BoundField HeaderText="Fee" DataField="fee" />
                     <asp:BoundField HeaderText="Height" DataField="height" />

@@ -11,7 +11,7 @@ namespace hospitalproject.modules
 {
 
 
-    public partial class hospital
+    public partial class city
     {
     }
 }

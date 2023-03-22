@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace hospitalproject.modules
+namespace hospitalproject
 {
 
 
-    public partial class hospital
+    public partial class dashboard
     {
     }
 }

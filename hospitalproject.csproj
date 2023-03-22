@@ -70,8 +70,10 @@
     <Content Include="API\default.asmx" />
     <Content Include="API\modules.asmx" />
     <Content Include="API\opd.asmx" />
-    <Content Include="dashboard.aspx" />
+    <Content Include="modules\dashboard.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="modules\charges.aspx" />
+    <Content Include="modules\city.aspx" />
     <Content Include="modules\consultant.aspx" />
     <Content Include="modules\disease.aspx" />
     <Content Include="modules\hospital.aspx" />
@@ -107,11 +109,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="API\SqlHelper.cs" />
-    <Compile Include="dashboard.aspx.cs">
+    <Compile Include="modules\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="dashboard.aspx.designer.cs">
+    <Compile Include="modules\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
@@ -127,6 +129,20 @@
     </Compile>
     <Compile Include="index.Master.designer.cs">
       <DependentUpon>index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="modules\charges.aspx.cs">
+      <DependentUpon>charges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\charges.aspx.designer.cs">
+      <DependentUpon>charges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\city.aspx.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\city.aspx.designer.cs">
+      <DependentUpon>city.aspx</DependentUpon>
     </Compile>
     <Compile Include="modules\consultant.aspx.cs">
       <DependentUpon>consultant.aspx</DependentUpon>
