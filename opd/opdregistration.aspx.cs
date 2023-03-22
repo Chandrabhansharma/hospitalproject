@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -21,12 +22,14 @@ namespace hospitalproject.opd
                 grddata.DataBind();
             }
         }
-
         protected void save_Click(object sender, EventArgs e)
         {
+
             try
             {
                 opddata.opdregistrationsave(patientid.Text, patientname.Text, age.Text, gender.SelectedValue, date.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, department.SelectedValue, consultant.SelectedValue, visitetype.SelectedValue, fee.SelectedValue, height.Text, weight.Text, bloodpressure.Text, temperature.Text, remark.Text);
+                // Response.Write("Save Successfully !!!");
+                // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'opdregistration.aspx'})", true);
             }
             catch (Exception ex)
@@ -80,7 +83,10 @@ namespace hospitalproject.opd
                 grddata.HeaderRow.TableSection = TableRowSection.TableHeader;
                 grddata.FooterRow.TableSection = TableRowSection.TableFooter;
             }
-
         }
+
+       
     }
 }
+
+

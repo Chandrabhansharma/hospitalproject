@@ -74,12 +74,12 @@
                     </div><div class="col-md-6"></div>
                         <div class="col-md-2 mt-1">
                             <br />
-                                  <asp:Button ID="save" runat="server" Text="Save" OnClick="save_Click" CssClass="btn w-100" />
+<asp:Button ID="save" runat="server" Text="Save" OnClick="save_Click" CssClass="btn w-100" />
                         </div>
                     </div>
                 </div>
             </div>
-
+         </div>
          <div class="row m-0 p-0 border-0 fw-bold table-responsive card-body">
             <asp:GridView ID="grddata" GridLines="None" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="grddata_PreRender" OnRowCommand="grddata_RowCommand" HeaderStyle-BackColor="Teal" HeaderStyle-ForeColor="White" runat="server" CssClass="table table-hover table-bordered">
                 <Columns>
