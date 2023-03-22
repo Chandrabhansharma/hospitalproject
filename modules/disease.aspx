@@ -10,7 +10,7 @@
                     <!--name-->
                     <div class="col-md-3">
                        Disease Name</div><div class="col-md-3">
-                        <asp:DropDownList ID="doctorname" runat="server" CssClass="form-control" required="doctorname"></asp:DropDownList>
+                        <asp:DropDownList ID="diseasename" runat="server" CssClass="form-control" required="diseasename"></asp:DropDownList>
                     </div>
                      <div class="col-md-3">
                         <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn w-25 btn-success " />
