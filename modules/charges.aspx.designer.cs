@@ -11,7 +11,7 @@ namespace hospitalproject.modules
 {
 
 
-    public partial class disease
+    public partial class chargers
     {
 
         /// <summary>
@@ -24,12 +24,12 @@ namespace hospitalproject.modules
         protected global::System.Web.UI.WebControls.DropDownList doctorname;
 
         /// <summary>
-        /// submit control.
+        /// specialization control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.WebControls.DropDownList specialization;
     }
 }
