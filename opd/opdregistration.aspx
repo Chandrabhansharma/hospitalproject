@@ -3,11 +3,11 @@
      <div class="container border p-2 card">
         <div class="row m-0 border p-0">
         <div class="col-md-12 p-2 bg-info border-0 fw-bold card-header">
-            <a href="opddashboard.aspx"> <i class="fa fa-arrow-left text-black"></i></a>Registration</div>
+            <a href="opddashboard.aspx"> <i class="fa fa-arrow-left text-black"></i></a> OPD Registration</div>
         <div class="col-md-12">
         <div class="row p-2">
              <div class="col-md-3">
-       Patient ID<br /><asp:TextBox ID="patientid" runat="server" CssClass="form-control"></asp:TextBox>
+       Patient No.<br /><asp:TextBox ID="patientno" runat="server" CssClass="form-control"></asp:TextBox>
        </div>
             <div class="col-md-3">
        Patient Name<br /><asp:TextBox ID="patientname" runat="server" CssClass="form-control"></asp:TextBox>
@@ -40,10 +40,10 @@
                            Address<asp:TextBox ID="address" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
              <div class="col-md-3">
-                           Department <asp:DropDownList ID="department" runat="server" CssClass="form-control"></asp:DropDownList>         
+                           Doctor Name <asp:DropDownList ID="doctorname" runat="server" CssClass="form-control"></asp:DropDownList>         
                         </div>
              <div class="col-md-3">
-                            Consultant <asp:DropDownList ID="consultant" runat="server" CssClass="form-control"></asp:DropDownList>         
+                            Specialization <asp:DropDownList ID="specialization" runat="server" CssClass="form-control"></asp:DropDownList>         
                         </div>
              <div class="col-md-3">
                          Visit Type <asp:DropDownList ID="visitetype" runat="server" CssClass="form-control">
@@ -52,7 +52,7 @@
                                     </asp:DropDownList>         
                         </div>
              <div class="col-md-3">
-                           Fee<asp:DropDownList ID="fee" runat="server" CssClass="form-control"></asp:DropDownList>         
+                           Fee<asp:TextBox ID="fee" runat="server" CssClass="form-control"></asp:TextBox>         
                         </div>
                       
                     <div class="col-md-12" style="font-weight:900">Medical Details:</div>
@@ -83,7 +83,7 @@
          <div class="row m-0 p-0 border-0 fw-bold table-responsive card-body">
             <asp:GridView ID="grddata" GridLines="None" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="grddata_PreRender" OnRowCommand="grddata_RowCommand" HeaderStyle-BackColor="Teal" HeaderStyle-ForeColor="White" runat="server" CssClass="table table-hover table-bordered">
                 <Columns>
-                    <asp:BoundField HeaderText="Patient ID" DataField="patientid" />
+                    <asp:BoundField HeaderText="Patient No." DataField="patientno" />
                     <asp:BoundField HeaderText="Patient Name" DataField="patientname" />
                      <asp:BoundField HeaderText="Age" DataField="age" />
                     <asp:BoundField HeaderText="Gender" DataField="gender" />
@@ -93,8 +93,8 @@
                     <asp:BoundField HeaderText="Mobile Number(Alternate)" DataField="mobilenumber2" />
                     <asp:BoundField HeaderText="Email" DataField="email" />
                     <asp:BoundField HeaderText="Address" DataField="address" />
-                    <asp:BoundField HeaderText="Department" DataField="department" />
-                     <asp:BoundField HeaderText="Consultant" DataField="consultant" />
+                    <asp:BoundField HeaderText="Doctor Name" DataField="doctorname" />
+                     <asp:BoundField HeaderText="Specialization" DataField="specialization" />
                     <asp:BoundField HeaderText="Visit Type" DataField="visittype" />
                      <asp:BoundField HeaderText="Fee" DataField="fee" />
                     <asp:BoundField HeaderText="Height" DataField="height" />
