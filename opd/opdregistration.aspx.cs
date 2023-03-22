@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,20 +17,20 @@ namespace hospitalproject.opd
         {
             if (!IsPostBack)
             {
-                dt = opddata.opdregistrationsearch("%", "%");
+                dt = opddata.opdregistrationsearch("%");
                 grddata.DataSource = dt;
                 grddata.DataBind();
             }
         }
-
         protected void save_Click(object sender, EventArgs e)
         {
+
             try
             {
-                opddata.opdregistrationsave(patientid.Text, patientname.Text, age.Text, gender.SelectedValue, date.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, department.SelectedValue, consultant.SelectedValue, visitetype.SelectedValue, fee.SelectedValue, height.Text, weight.Text, bloodpressure.Text, temperature.Text, remark.Text);
+                opddata.opdregistrationsave(registrationid.Text,patientno.Text, patientname.Text, age.Text, gender.SelectedValue, date.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, doctorname.SelectedValue, specialization.SelectedValue, visitetype.SelectedValue, fee.SelectedValue, height.Text, weight.Text, bloodpressure.Text, temperature.Text, remark.Text);
                 // Response.Write("Save Successfully !!!");
                 // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'Registration.aspx'})", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'opdregistration.aspx'})", true);
             }
             catch (Exception ex)
             {
@@ -42,8 +43,9 @@ namespace hospitalproject.opd
             {
                 if (e.CommandName == "btnedt")
                 {
-                    dt = opddata.opdregistrationsearch(e.CommandArgument.ToString(), "%");
-                    patientid.Text = dt.Rows[0]["patientid"].ToString();
+                    dt = opddata.opdregistrationsearch(e.CommandArgument.ToString());
+                    registrationid.Text = dt.Rows[0]["registrationid"].ToString();
+                    patientno.Text = dt.Rows[0]["patientno"].ToString();
                     patientname.Text = dt.Rows[0]["patientname"].ToString();
                     age.Text = dt.Rows[0]["age"].ToString();
                     gender.Text = dt.Rows[0]["gender"].ToString();
@@ -52,8 +54,8 @@ namespace hospitalproject.opd
                     mobilenumber2.Text = dt.Rows[0]["mobilenumber2"].ToString();
                     email.Text = dt.Rows[0]["email"].ToString();
                     address.Text = dt.Rows[0]["address"].ToString();
-                    department.Text = dt.Rows[0]["department"].ToString();
-                    consultant.Text = dt.Rows[0]["consultant"].ToString();
+                    doctorname.Text = dt.Rows[0]["doctorname"].ToString();
+                    specialization.Text = dt.Rows[0]["specialization"].ToString();
                     visitetype.Text = dt.Rows[0]["visittype"].ToString();
                     fee.Text = dt.Rows[0]["fee"].ToString();
                     height.Text = dt.Rows[0]["height"].ToString();
@@ -65,7 +67,7 @@ namespace hospitalproject.opd
                 else
                 {
                     opddata.opdregistrationdelete(e.CommandArgument.ToString());
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Delete Successfully !!!', 'success').then((value) => {window.location = 'Registration.aspx'})", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Delete Successfully !!!', 'success').then((value) => {window.location = 'opdregistration.aspx'})", true);
                 }
             }
             catch (Exception ex)
@@ -82,7 +84,10 @@ namespace hospitalproject.opd
                 grddata.HeaderRow.TableSection = TableRowSection.TableHeader;
                 grddata.FooterRow.TableSection = TableRowSection.TableFooter;
             }
-
         }
+
+       
     }
 }
+
+

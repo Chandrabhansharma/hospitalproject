@@ -21,21 +21,21 @@ namespace hospitalproject.API
     {
         TextInfo pcase = new CultureInfo("en-US", false).TextInfo;
         [WebMethod]
-        public DataTable opdregistrationsearch(string sn, string patientid)
+        public DataTable opdregistrationsearch(string patientid)
         {
             {
-                return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from opdregistration where sn like'" + sn + "'and patientid like'" + patientid + "'");
+                return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from opdregistration where patientid like'" + patientid + "'");
             }
         }
         [WebMethod]
-        public void opdregistrationsave(string patientid, string patientname, string age, string gender, string date, string mobilenumber, string mobilenumber2, string email, string address, string department, string consultant, string visittype, string fee, string height, string weight, string bloodpressure, string temperature, string remark)
+        public void opdregistrationsave(string registrationid,string patientno, string patientname, string age, string gender, string date, string mobilenumber, string mobilenumber2, string email, string address, string doctorname, string specialization, string visittype, string fee, string height, string weight, string bloodpressure, string temperature, string remark)
         {
-            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into opdregistration(patientid,patientname,age,gender,date,mobilenumber,mobilenumber2,email,address,department,consultant,visittype,fee,height,weight,bloodpressure,temperature,remark) values('" + pcase.ToTitleCase(patientid) + "','" + patientname + "','" + age + "','" + gender + "','" + date + "','" + mobilenumber + "','" + mobilenumber2 + "','" + email + "','" + address + "', '" + department + "', '" + consultant + "', '" + visittype + "', '" + fee + "', '" + height + "', '" + weight + "', '" + bloodpressure + "', '" + temperature + "', '" + remark + "')");
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into opdregistration(registratioid,patientno,patientname,age,gender,date,mobilenumber,mobilenumber2,email,address,doctorname,specialization,visittype,fee,height,weight,bloodpressure,temperature,remark) values('" + pcase.ToTitleCase(registrationid) + "','" + patientno + "','" + patientname + "','" + age + "','" + gender + "','" + date + "','" + mobilenumber + "','" + mobilenumber2 + "','" + email + "','" + address + "', '" + doctorname + "', '" +specialization + "', '" + visittype + "', '" + fee + "', '" + height + "', '" + weight + "', '" + bloodpressure + "', '" + temperature + "', '" + remark + "')");
         }
         [WebMethod]
-        public void opdregistrationdelete(string sn)
+        public void opdregistrationdelete(string patientid)
         {
-            SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from opdregistration where sn='" + sn + "'");
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from opdregistration where patientid='" + patientid + "'");
         }
     }
 }

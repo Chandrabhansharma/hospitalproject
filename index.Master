@@ -70,17 +70,13 @@
         
         <!--section2 end-->
         <div>
-            <asp:ScriptManager ID="sc" EnableCdn="true" runat="server">
-                    <Scripts>
-                        <asp:ScriptReference Path="Support/js/jquery-3.3.1.min.js" />
-                        <asp:ScriptReference Path="Support/js/bootstrap.bundle.min.js" />
-                        <asp:ScriptReference Path="Support/js/dataTables.min.js" />
-                        <asp:ScriptReference Path="Support/js/sweetalert.min.js" />
-                    </Scripts>
-                </asp:ScriptManager>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+         <script src="support/JS/bootstrap.bundle.js"></script>
+         <script src="support/JS/jquery-3.3.1.min.js"></script>
+         <script src="support/JS/dataTables.min.js"></script>
+         <script src="support/JS/sweetalert.min.js"></script>
     </form>
 </body>
      <script>
