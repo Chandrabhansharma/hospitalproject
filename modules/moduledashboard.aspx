@@ -12,20 +12,15 @@
             </a>
              <a href="../modules/consultant.aspx" class="col-md-dashboard border p-3 ad">
                 <center><i class="fa fa-2x fa-archive"></i>
-                <div class="mt-2"> Consultant</div></center>
+                <div class="mt-2"> Consultant/Charges</div></center>
             </a>
-             <a href="../modules/city.aspx" class="col-md-dashboard border p-3 ad">
-                <center><i class="fa fa-2x fa-plus-square"></i>
-                <div class="mt-2"> City/ Country</div></center>
-            </a>
+           
              <a href="../modules/disease.aspx" class="col-md-dashboard border p-3 ad">
                 <center><i class="fa fa-2x fa-bed"></i>
                 <div class="mt-2">Disease</div></center>
             </a>
-             <a href="../modules/charges.aspx" class="col-md-dashboard border p-3 ad">
-                <center><i class="fa fa-2x fa-bed"></i>
-                <div class="mt-2">Charges</div></center>
-            </a>
+           
+       
             
            
         </div>
