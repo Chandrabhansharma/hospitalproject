@@ -51,7 +51,7 @@ namespace hospitalproject.modules
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            chargesdata.chargessave(doctorid.Text,doctorname.Text, specialization.Text,date.Text,visittype.Text,fee.Text);
+            chargesdata.chargessave(doctorid.Text,doctorname.Text, specialization.Text,date.Text,visittype.Text,Convert.ToInt32(fee.Text));
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Sucessfully!!!', 'success').then((value) => { window.location = 'charges.aspx'})", true);
 
         }

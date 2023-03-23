@@ -64,7 +64,7 @@ namespace hospitalproject.API
             return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from charges where sn like'" + sn + "' and doctorid like'" + doctorid + "'");
         }
         [WebMethod]
-        public void chargessave(string doctorid, string doctorname, string specialization, string date, string visittype, string fee)
+        public void chargessave(string doctorid, string doctorname, string specialization, string date, string visittype, int fee)
         {
             SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into charges(doctorid,doctorname,specialization,date,visittype,fee) values('" + pcase.ToTitleCase(doctorid) + "','" + doctorname + "','" + specialization + "','" + date + "','" + visittype + "','" + fee  + "')");
         }
