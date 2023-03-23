@@ -70,6 +70,7 @@
     <Content Include="API\default.asmx" />
     <Content Include="API\modules.asmx" />
     <Content Include="API\opd.asmx" />
+    <Content Include="modules\charges.aspx" />
     <Content Include="modules\dashboard.aspx" />
     <Content Include="default.aspx" />
     <Content Include="modules\consultant.aspx" />
@@ -107,6 +108,13 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="API\SqlHelper.cs" />
+    <Compile Include="modules\charges.aspx.cs">
+      <DependentUpon>charges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\charges.aspx.designer.cs">
+      <DependentUpon>charges.aspx</DependentUpon>
+    </Compile>
     <Compile Include="modules\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
