@@ -35,7 +35,9 @@ namespace hospitalproject.API
         [WebMethod]
         public void opdregistrationdelete(string registrationid)
         {
-            SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from opdregistration where patientid='" + registrationid + "'");
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from opdregistration where registrationid='" + registrationid + "'");
         }
+
+       
     }
 }

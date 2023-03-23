@@ -12,7 +12,7 @@
             </a>
              <a href="../modules/consultant.aspx" class="col-md-dashboard border p-3 ad">
                 <center><i class="fa fa-2x fa-archive"></i>
-                <div class="mt-2"> Consultant/Charges</div></center>
+                <div class="mt-2"> Consultant</div></center>
             </a>
            
              <a href="../modules/disease.aspx" class="col-md-dashboard border p-3 ad">
