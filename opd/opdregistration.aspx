@@ -73,9 +73,9 @@
                        Remark<asp:TextBox ID="remark" runat="server" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>
                     </div><div class="col-md-6"></div>
                         <div class="col-md-2 mt-1">
-                            <br />
-<asp:Button ID="save" runat="server" Text="Save" OnClick="save_Click" CssClass="btn w-100" />
-                        </div>
+                           
+                        <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn w-100 btn-success " OnClick="submit_Click"/>
+                         </div>
                     </div>
                 </div>
             </div>
