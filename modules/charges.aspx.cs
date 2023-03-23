@@ -15,6 +15,7 @@ namespace hospitalproject.modules
     public partial class charges : System.Web.UI.Page
     {
         API.modules chargesdata=new API.modules();
+        API.modules consultantdata= new API.modules();
         DataTable dt;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,21 +26,21 @@ namespace hospitalproject.modules
                 grddata.DataSource = dt;
                 grddata.DataBind();
 
-                dt = consultant.consultantsearch("%", "%");
+                dt = consultantdata.consultantsearch("%", "%");
                 doctorid.DataSource = dt.DefaultView.ToTable(true, "doctorid");
                 doctorid.DataTextField = "doctorid";
                 doctorid.DataValueField = "doctorid";
                 doctorid.DataBind();
                 doctorid.Items.Insert(0, "---Select---");
 
-                dt = consultant.consultantsearch("%", "%");
+                dt = consultantdata.consultantsearch("%", "%");
                 doctorname.DataSource = dt.DefaultView.ToTable(true, "doctorname");
                 doctorname.DataTextField = "doctorname";
                 doctorname.DataValueField = "doctorname";
                 doctorname.DataBind();
                 doctorname.Items.Insert(0, "---Select---");
 
-                dt = consultant.consultantsearch("%", "%");
+                dt = consultantdata.consultantsearch("%", "%");
                 specialization.DataSource = dt.DefaultView.ToTable(true, "specialization");
                 specialization.DataTextField = "specialization";
                 specialization.DataValueField = "specialization";
@@ -72,7 +73,7 @@ namespace hospitalproject.modules
                 else
                 {
                     chargesdata.chargesdelete(e.CommandArgument.ToString());
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Delete Successfully !!!', 'success').then((value) => {window.location = 'newlisting.aspx'})", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Delete Successfully !!!', 'success').then((value) => {window.location = 'charges.aspx'})", true);
                 }
             }
             catch (Exception ex)

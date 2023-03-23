@@ -19,6 +19,10 @@
                 <center><i class="fa fa-2x fa-bed"></i>
                 <div class="mt-2">Disease</div></center>
             </a>
+              <a href="../modules/charges.aspx" class="col-md-dashboard border p-3 ad">
+                <center><i class="fa fa-2x fa-money"></i>
+                <div class="mt-2">Charges</div></center>
+            </a>
            
        
             
