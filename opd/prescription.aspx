@@ -17,7 +17,7 @@
       Specialization<br /><asp:TextBox ID="specialization" runat="server" CssClass="form-control"></asp:TextBox>
        </div>
                   <div class="col-md-3">
-                            Mobile Number<asp:TextBox ID="TextBox4" runat="server" CssClass="form-control"></asp:TextBox>
+                            Phone Number<asp:TextBox ID="phonenumber" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
         <div class="row p-2">
