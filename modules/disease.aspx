@@ -27,10 +27,10 @@
                     
                    
 
-                </div>
+              </div>
                 
         </div>
-</div>
+</div></div>
 
  <div class="row m-0 p-0 border-0 fw-bold table-responsive card-body">
        
@@ -49,5 +49,4 @@
         </div>
 
 
-        </div>
 </asp:Content>
