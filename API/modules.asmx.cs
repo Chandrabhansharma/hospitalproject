@@ -73,5 +73,29 @@ namespace hospitalproject.API
         {
             SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from charges where sn ='" + sn + "'");
         }
+
+
+
+        //disease
+        [WebMethod]
+        public DataTable diseasesearch(string sn, string diseasen)
+        {
+            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from disease where sn like'" + sn + "' and diseasen like'" + diseasen + "'");
+        }
+        [WebMethod]
+        public void diseasesubmit(string diseasen, string remark)
+        {
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into disease(diseasen,remark) values('" + pcase.ToTitleCase(diseasen) + "','" + remark + "')");
+        }
+        [WebMethod]
+        public void diseasedelete(string sn)
+        {
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from disease where sn ='" + sn + "'");
+        }
+
+
+
+
+
     }
 }

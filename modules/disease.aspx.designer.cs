@@ -15,13 +15,22 @@ namespace hospitalproject.modules
     {
 
         /// <summary>
-        /// diseasename control.
+        /// diseasen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList diseasename;
+        protected global::System.Web.UI.WebControls.TextBox diseasen;
+
+        /// <summary>
+        /// remark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox remark;
 
         /// <summary>
         /// submit control.
@@ -31,5 +40,14 @@ namespace hospitalproject.modules
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submit;
+
+        /// <summary>
+        /// grddata control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grddata;
     }
 }
