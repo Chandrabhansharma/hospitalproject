@@ -33,9 +33,7 @@ namespace hospitalproject.modules
             try
             {
                 moduledata.consultantsave(doctorid.Text, doctorname.Text, licenceno.Text, specialization.Text, designation.Text, qualification.Text, mobilenumber.Text, mobilenumber2.Text,email.Text,address.Text,city.Text,state.Text, shift.SelectedValue,date.Text);
-                // Response.Write("Save Successfully !!!");
-                // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'consultant.aspx'})", true);
+              ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'consultant.aspx'})", true);
             }
             catch (Exception ex)
             {

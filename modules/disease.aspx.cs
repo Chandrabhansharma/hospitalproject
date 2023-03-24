@@ -20,6 +20,18 @@ namespace hospitalproject.modules
                 grddata.DataBind();
             }
         }
+        protected void submit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                moduledata.diseasesubmit(diseasen.Text, remark.Text);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'disease.aspx'})", true);
+            }
+            catch (Exception ex)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
+            }
+        }
         protected void grddata_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             try
@@ -55,17 +67,6 @@ namespace hospitalproject.modules
 
         }
 
-        protected void submit_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                moduledata.diseasesubmit(diseasen.Text, remark.Text);
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'disease.aspx'})", true);
-            }
-            catch (Exception ex)
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
-            }
-        }
+       
     }
 }

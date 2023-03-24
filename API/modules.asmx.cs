@@ -93,9 +93,5 @@ namespace hospitalproject.API
             SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from disease where sn ='" + sn + "'");
         }
 
-
-
-
-
     }
 }
