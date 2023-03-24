@@ -9,6 +9,10 @@
                 <center><i class="fa fa-2x fa-file-text-o"></i>
                 <div class="mt-2">OPD Registration</div></center>
             </a>
+            <a href="prescription.aspx" class="col-md-dashboard border p-3 ad">
+                <center><i class="fa fa-2x fa-file-text-o"></i>
+                <div class="mt-2">Prescription</div></center>
+            </a>
             
         </div>
        
