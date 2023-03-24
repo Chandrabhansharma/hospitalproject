@@ -10,7 +10,7 @@ namespace hospitalproject.modules
     public partial class disease : System.Web.UI.Page
     {
         API.modules moduledata = new API.modules();
-        DataTable dt;
+        Datatable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

@@ -22,9 +22,9 @@
                     </div>
                      <div class="col-md-3">
                          <br />
-                        <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn w-25 btn-success  "  OnClick="submit_Click" />
+                        <asp:Button ID="submit" runat="server" Text="submit" CssClass="btn w-25 btn-success  "  OnClick="submit_Click" />
                          </div>
-                    <div class="col-md-12"></div>
+                    
                    
 
                 </div>
@@ -36,7 +36,7 @@
        
 <asp:GridView ID="grddata" GridLines="None" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="grddata_PreRender" OnRowCommand="grddata_RowCommand" HeaderStyle-BackColor="Teal" HeaderStyle-ForeColor="white" runat="server" CssClass="table table-hover table-bordered">
 <Columns>
-<asp:BoundField HeaderText="Disease Name" DataField="diseasename" />
+<asp:BoundField HeaderText="Disease" DataField="diseasen" />
 <asp:BoundField HeaderText="Remark" DataField="remark" />
 
 
