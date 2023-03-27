@@ -28,7 +28,7 @@
 </head>
     <body>
     <form id="form1" runat="server">
-       <section class="vh-100" style="background-color: #99e6b3;">
+       <section class="vh-100" style="background-color: #73baba;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
