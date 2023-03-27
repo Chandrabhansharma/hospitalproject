@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 namespace hospitalproject.modules
 {
     public partial class disease : System.Web.UI.Page
-    {
+    { 
         API.modules moduledata = new API.modules();
         Datatable dt;
         protected void Page_Load(object sender, EventArgs e)
