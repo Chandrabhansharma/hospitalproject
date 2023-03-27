@@ -9,11 +9,12 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-       <link href="support/CSS/bootstrap.css" rel="stylesheet" />
+    <link href="support/CSS/bootstrap.css" rel="stylesheet" />
     <link href="support/CSS/font-awesome.css" rel="stylesheet" />
     <link href="support/CSS/sweetalert.min.css" rel="stylesheet" />
     <link href="support/CSS/dataTables.css" rel="stylesheet" />
-    <link href="support/CSS/style.css" rel="stylesheet" />
+     <link href="support/CSS/style.css" rel="stylesheet" />
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -73,10 +74,12 @@
       <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-         <script src="support/JS/bootstrap.bundle.js"></script>
-         <script src="support/JS/jquery-3.3.1.min.js"></script>
-         <script src="support/JS/dataTables.min.js"></script>
-         <script src="support/JS/sweetalert.min.js"></script>
+
+        <script src="support/JS/bootstrap.bundle.js"></script>
+        <script src="support/JS/jquery-3.3.1.min.js"></script>
+        <script src="support/JS/dataTables.min.js"></script>
+        <script src="support/JS/sweetalert.min.js"></script>
+
     </form>
 </body>
      <script>
