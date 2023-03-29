@@ -67,7 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="API\default.asmx" />
     <Content Include="API\modules.asmx" />
     <Content Include="API\opd.asmx" />
     <Content Include="modules\charges.aspx" />
@@ -96,10 +95,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\default.asmx.cs">
-      <DependentUpon>default.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="API\modules.asmx.cs">
       <DependentUpon>modules.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -221,6 +216,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="photo\Hospital\" />
+    <Folder Include="photo\Signature\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

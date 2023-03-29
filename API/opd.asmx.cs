@@ -38,6 +38,25 @@ namespace hospitalproject.API
             SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from opdregistration where registrationid='" + registrationid + "'");
         }
 
-       
+        // prescription
+
+        [WebMethod]
+        public DataTable prescriptionsearch(string sn)
+        {
+            {
+                return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from prescription where sn like'" + sn + "'");
+            }
+        }
+        [WebMethod]
+        public void prescriptionsubmit(string doctorid,string doctorname,string qualification,string specialization,string phonenumber,string patientno, string patientname, string age, string gender, string mobilenumber,string address, string date, string height, string weight, string bloodpressure, string temperature, string symptoms,string medicinecompanyname,string medicinename,string dosage,string duration,string testing, string avoid, string followup, string signature,string name)
+        {
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into prescription(doctorid,doctorname,qualification,specialization,phonenumber,patientno,patientname,age,gender,mobilenumber,address,date,height,weight,bloodpressure,temperature,symptoms,medicinecompanyname,medicinename,doage,duration,testing,avoid,followup,signature,name) values('" + pcase.ToTitleCase(doctorid) + "','" + doctorname + "','" + qualification + "','" + specialization + "','" + phonenumber + "','" + patientno + "','" + patientname + "','" + age + "','" + gender + "','" + mobilenumber + "','" + address + "', '" + date + "', '" + height + "', '" + weight + "', '" + bloodpressure + "', '" + temperature + "', '" + symptoms + "','" + medicinecompanyname + "','" + medicinename + "','" + dosage + "','" + duration + "','" + testing + "','" + avoid +  "','" + followup + "','" + signature + "','" + name + "')");
+        }
+        [WebMethod]
+        public void prescriptiondelete(string sn)
+        {
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from prescription where sn='" + sn + "'");
+        }
+
     }
 }

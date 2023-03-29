@@ -15,6 +15,15 @@ namespace hospitalproject.opd
     {
 
         /// <summary>
+        /// doctorid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox doctorid;
+
+        /// <summary>
         /// doctorname control.
         /// </summary>
         /// <remarks>
@@ -204,24 +213,6 @@ namespace hospitalproject.opd
         protected global::System.Web.UI.WebControls.TextBox duration;
 
         /// <summary>
-        /// add2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton add2;
-
-        /// <summary>
-        /// remove2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton remove2;
-
-        /// <summary>
         /// testing control.
         /// </summary>
         /// <remarks>
@@ -231,24 +222,6 @@ namespace hospitalproject.opd
         protected global::System.Web.UI.WebControls.TextBox testing;
 
         /// <summary>
-        /// add1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton add1;
-
-        /// <summary>
-        /// remove1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton remove1;
-
-        /// <summary>
         /// avoid control.
         /// </summary>
         /// <remarks>
@@ -256,24 +229,6 @@ namespace hospitalproject.opd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox avoid;
-
-        /// <summary>
-        /// add control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton add;
-
-        /// <summary>
-        /// remove control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton remove;
 
         /// <summary>
         /// followup control.
@@ -310,5 +265,14 @@ namespace hospitalproject.opd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submit;
+
+        /// <summary>
+        /// grddata control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grddata;
     }
 }

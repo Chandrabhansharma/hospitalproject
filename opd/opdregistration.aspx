@@ -4,7 +4,7 @@
     <div class="container border p-2 card">
         <div class="row m-0 border p-0">
             <div class="col-md-12 p-2 bg-info border-0 fw-bold card-header">
-                <a href="opddashboard.aspx"><i class="fa fa-arrow-left text-black"></i></a>OPD Registration
+                <a href="opddashboard.aspx"><i class="fa fa-arrow-left text-black"></i></a>OPD REGISTRATION
             </div>
             <div class="col-md-12">
                 <div class="row p-2">

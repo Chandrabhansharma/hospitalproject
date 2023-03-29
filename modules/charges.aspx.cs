@@ -22,6 +22,7 @@ namespace hospitalproject.modules
         {
             if (!IsPostBack)
             {
+                date.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 dt = chargesdata.chargessearch("%", "%");
                 grddata.DataSource = dt;
                 grddata.DataBind();
@@ -48,7 +49,10 @@ namespace hospitalproject.modules
                 specialization.Items.Insert(0, "---Select---");
             }
         }
-
+        private void data()
+        {
+            date.Text = DateTime.Now.ToString("yyyy-MM-dd");
+        }
         protected void submit_Click(object sender, EventArgs e)
         {
             chargesdata.chargessave(doctorid.Text,doctorname.Text, specialization.Text,date.Text,visittype.Text,Convert.ToInt32(fee.Text));
