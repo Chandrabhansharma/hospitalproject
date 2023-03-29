@@ -89,16 +89,46 @@
                           Duration<br /><asp:TextBox ID="duration" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
 
-                
+                <div class="col-md-10"></div>
+                  <div class="col-md-1">
+                     <br />
+                     <asp:LinkButton ID="add2" runat="server" Text="<i class='fa fa-plus text-white'></i>" CssClass="btn bg-primary"></asp:LinkButton>
+                     
+                 </div>
+                  <div class="col-md-1">
+                     <br />
+                     <asp:LinkButton ID="remove2" runat="server" Text="<i class='fa fa-window-minimize text-white'></i>" CssClass="btn  p-0 float-end"></asp:LinkButton>
+                     
+                 </div>
 
                  <div class="col-md-3">
       Testing<br /><asp:TextBox ID="testing" runat="server" CssClass="form-control"></asp:TextBox>
        </div>
-                  <div class="col-md-9"> </div>
+                  <div class="col-md-1">
+                     <br />
+                     <asp:LinkButton ID="add1" runat="server" Text="<i class='fa fa-plus text-white'></i>" CssClass="btn  p-0 float-end"></asp:LinkButton>
+                     
+                 </div>
+                  <div class="col-md-1">
+                     <br />
+                     <asp:LinkButton ID="remove1" runat="server" Text="<i class='fa fa-window-minimize text-white'></i>" CssClass="btn  p-0 float-end"></asp:LinkButton>
+                     
+                 </div>
+                  <div class="col-md-7"> </div>
            <div class="col-md-3">
       Avoid<br /><asp:TextBox ID="avoid" runat="server" CssClass="form-control"></asp:TextBox>
        </div>
-                  <div class="col-md-9"> </div>
+                 <div class="col-md-1">
+                     <br />
+                     <asp:LinkButton ID="add" runat="server" Text="<i class='fa fa-plus text-white'></i>" CssClass="btn  p-0 float-end"></asp:LinkButton>
+                     
+                 </div>
+                  <div class="col-md-1">
+                     <br />
+                     <asp:LinkButton ID="remove" runat="server" Text="<i class='fa fa-window-minimize text-white'></i>" CssClass="btn  p-0 float-end"></asp:LinkButton>
+                     
+                 </div>
+                  <div class="col-md-7"> </div>
                  <div class="col-md-3">
       Follow Up<br /><asp:TextBox ID="followup" TextMode="Date" runat="server" CssClass="form-control"></asp:TextBox>
        </div>
@@ -127,3 +157,4 @@
             </div>
          </div>
 </asp:Content>
+	

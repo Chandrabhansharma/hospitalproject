@@ -28,8 +28,8 @@ namespace hospitalproject.modules
             {
                 if (logo.PostedFile.ContentLength > 1)
                 {
-                    logo.SaveAs(Server.MapPath("~/Photo/Hospital" + hospitalname.Text + ".jpg"));
-                    logopath = "~/Photo/Hospital" + hospitalname.Text + ".jpg";
+                    logo.SaveAs(Server.MapPath("~/photo/Hospital" + hospitalname.Text + ".jpg"));
+                    logopath = "~/photo/Hospital" + hospitalname.Text + ".jpg";
                 }
                 moduledata.hospitalsave(hospitalname.Text, slogan.Text, mobileno.Text, mobileno2.Text, emailid.Text, website.Text, medicalcouncil.Text, Convert.ToInt32(medicalregno.Text), address1.Text, address2.Text, pincode.Text, city.Text, state.SelectedValue, country.SelectedValue, logopath.ToString());
                 // Response.Write("Save Successfully !!!");
