@@ -14,7 +14,7 @@
     <link href="support/CSS/dataTables.css" rel="stylesheet" />
      <link href="support/CSS/style.css" rel="stylesheet" />    
     <link href="support/CSS/sweetalert.min.css" rel="stylesheet" />
-    <script src="support/JS/sweetalert.min.js"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -75,7 +75,8 @@
             </asp:ContentPlaceHolder>
         </div>
         <script src="support/JS/jquery-3.3.1.min.js"></script>
-        <script src="support/JS/bootstrap.bundle.js"></script>        
+        <script src="support/JS/bootstrap.bundle.js"></script>
+        
         <script src="support/JS/dataTables.min.js"></script>
         <script src="support/JS/sweetalert.min.js"></script>
 
