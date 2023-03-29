@@ -30,7 +30,7 @@
               </div>
                 
         </div>
-</div></div>
+</div>
 
  <div class="row m-0 p-0 border-0 fw-bold table-responsive card-body">
        
@@ -47,6 +47,6 @@
                 </Columns>
             </asp:GridView>
         </div>
-
+        </div>
 
 </asp:Content>

@@ -17,7 +17,7 @@
       Specialization<br /><asp:TextBox ID="specialization" runat="server" CssClass="form-control"></asp:TextBox>
        </div>
                   <div class="col-md-3">
-                            Phone Number<asp:TextBox ID="phonenumber" runat="server" CssClass="form-control"></asp:TextBox>
+                            Phone Number<br /><asp:TextBox ID="phonenumber" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
         <div class="row p-2">
@@ -31,7 +31,7 @@
       Age<br /><asp:TextBox ID="age" runat="server" CssClass="form-control"></asp:TextBox>
        </div>
             <div class="col-md-3">
-                            Gender<asp:DropDownList ID="gender" runat="server" CssClass="form-control">
+                            Gender<br /><asp:DropDownList ID="gender" runat="server" CssClass="form-control">
                         <asp:ListItem>Male</asp:ListItem>
                         <asp:ListItem>Female</asp:ListItem>
                         <asp:ListItem>Others</asp:ListItem>
@@ -40,30 +40,30 @@
             
            
                         <div class="col-md-3">
-                            Mobile Number<asp:TextBox ID="mobilenumber" runat="server" CssClass="form-control"></asp:TextBox>
+                            Mobile Number<br /><asp:TextBox ID="mobilenumber" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
            
                         <div class="col-md-3">
-                            Email<asp:TextBox ID="email" TextMode="Email" runat="server" CssClass="form-control"></asp:TextBox>
+                            Email<br /><asp:TextBox ID="email" TextMode="Email" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                        
                        <div class="col-md-3">
-                           Address<asp:TextBox ID="address" runat="server" CssClass="form-control"></asp:TextBox>
+                           Address<br /><asp:TextBox ID="address" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
              <div class="col-md-3">
-                          Date<asp:TextBox ID="date" runat="server" TextMode="Date"  CssClass="form-control"></asp:TextBox>
+                          Date<br /><asp:TextBox ID="date" runat="server" TextMode="Date"  CssClass="form-control"></asp:TextBox>
                         </div>
                     <div class="col-md-3">
-                        Height<asp:TextBox ID="height" runat="server" CssClass="form-control"></asp:TextBox>
+                        Height<br><asp:TextBox ID="height" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                      <div class="col-md-3">
-                        Weight<asp:TextBox ID="weight" runat="server" CssClass="form-control"></asp:TextBox>
+                        Weight<br /><asp:TextBox ID="weight" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                      <div class="col-md-3">
-                        Blood Pressure<asp:TextBox ID="bloodpressure" runat="server" CssClass="form-control"></asp:TextBox>
+                        Blood Pressure<br /><asp:TextBox ID="bloodpressure" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                      <div class="col-md-3">
-                       Temperature<asp:TextBox ID="temperature" runat="server" CssClass="form-control"></asp:TextBox>
+                       Temperature<br /><asp:TextBox ID="temperature" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     
                         
@@ -86,13 +86,42 @@
       Dosage<br /><asp:TextBox ID="dosage" runat="server" CssClass="form-control"></asp:TextBox>
        </div>
                   <div class="col-md-3">
-                          Duration<asp:TextBox ID="duration" runat="server" CssClass="form-control"></asp:TextBox>
+                          Duration<br /><asp:TextBox ID="duration" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
-                 <div class="col-md-2 mt-1">
+
+                
+
+                 <div class="col-md-3">
+      Testing<br /><asp:TextBox ID="testing" runat="server" CssClass="form-control"></asp:TextBox>
+       </div>
+                  <div class="col-md-9"> </div>
+           <div class="col-md-3">
+      Avoid<br /><asp:TextBox ID="avoid" runat="server" CssClass="form-control"></asp:TextBox>
+       </div>
+                  <div class="col-md-9"> </div>
+                 <div class="col-md-3">
+      Follow Up<br /><asp:TextBox ID="followup" TextMode="Date" runat="server" CssClass="form-control"></asp:TextBox>
+       </div>
+                  <div class="col-md-9"> </div>
+                  <div class="col-md-9"> </div>
+                 <div class="col-md-3">
+      Signature<br /><asp:FileUpload ID="signature" runat="server" CssClass="form-control" />
+       </div>
+                  <div class="col-md-9"> </div>
+                 <div class="col-md-3">
+      Name<br /><asp:TextBox ID="name" runat="server" CssClass="form-control"></asp:TextBox>
+       </div>
+                  
+
+
+
+                 <div class="col-md-2 mt-1"><br />
                            
                         <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn w-100 btn-success "/>
                          </div>
                     </div>
+                 
+
 
                 </div>
             </div>

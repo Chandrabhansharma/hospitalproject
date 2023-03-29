@@ -4,13 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace hospitalproject.modules
 {
     public partial class disease : System.Web.UI.Page
     { 
         API.modules moduledata = new API.modules();
-        Datatable dt;
+        DataTable dt;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
