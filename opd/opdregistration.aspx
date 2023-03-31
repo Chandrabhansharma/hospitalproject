@@ -6,8 +6,10 @@
             <div class="col-md-12 p-2 bg-info border-0 fw-bold card-header">
                 <a href="opddashboard.aspx"><i class="fa fa-arrow-left text-black"></i></a>OPD REGISTRATION
             </div>
-            <div class="col-md-12">
-                <div class="row p-2">
+             <div class="col-md-12">
+            <div class="container border p-2 card">
+            <div class="col-md-12" style="font-weight:900">PATIENT DETAILS:</div>
+             <div class="row p-2">
                     <div class="col-md-3">
                         Patient No.<br />
                         <asp:TextBox ID="patientno" runat="server" CssClass="form-control"></asp:TextBox>
@@ -43,7 +45,11 @@
 
                     <div class="col-md-3">
                         Address<asp:TextBox ID="address" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
+                    </div></div></div></div>
+            <div class="col-md-12">
+                    <div class="container border p-2 card">
+           <div class="col-md-12" style="font-weight:900">DOCTOR DETAILS:</div>
+             <div class="row p-2">
                     <div class="col-md-3">
                         Doctor Name
                         <asp:DropDownList ID="doctorname" runat="server" CssClass="form-control"></asp:DropDownList>
@@ -63,7 +69,11 @@
                         Fee<asp:TextBox ID="fee" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
 
-                    <div class="col-md-12" style="font-weight: 900">Medical Details:</div>
+             </div></div></div>
+            <div class="col-md-12">
+                      <div class="container border p-2 card">
+                 <div class="col-md-12" style="font-weight: 900">MEDICAL DETAILS:</div>
+             <div class="row p-2">
                     <div class="col-md-3">
                         Height<asp:TextBox ID="height" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
@@ -80,13 +90,13 @@
                     <div class="col-md-6">
                         Remark<asp:TextBox ID="remark" runat="server" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>
                     </div>
-                    <div class="col-md-6"></div>
-                    <div class="col-md-2 mt-1">
+                    <div class="col-md-6"></div></div></div></div>
+                    <div class="col-md-2 mt-1"><br />
 
                         <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn w-100 btn-success " OnClick="submit_Click" />
                     </div>
                 </div>
-            </div>
+           
         </div>
 
     <div class="row m-0 p-0 border-0 fw-bold table-responsive card-body">
@@ -120,6 +130,6 @@
             </Columns>
         </asp:GridView>
     </div>
-    </div>
+   
 
 </asp:Content>
