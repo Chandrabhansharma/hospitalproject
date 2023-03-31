@@ -16,24 +16,51 @@ namespace hospitalproject.modules
         {
             if (!IsPostBack)
             {
-                date.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 dt = moduledata.consultantsearch("%", "%");
                 grddata.DataSource = dt;
                 grddata.DataBind();
+                data();
             }
         }
         private void data()
         {
             date.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            dt = moduledata.state();
+            state.DataSource = dt;
+            state.DataTextField = "state";
+            state.DataValueField = "state";
+            state.DataBind();
+            state.Items.Insert(0, new ListItem("---Select---", "---Select---"));
         }
-
         protected void save_Click(object sender, EventArgs e)
         {
-
             try
             {
-                moduledata.consultantsave(doctorid.Text, doctorname.Text, licenceno.Text, specialization.Text, designation.Text, qualification.Text, mobilenumber.Text, mobilenumber2.Text,email.Text,address.Text,city.Text,state.Text, shift.SelectedValue,date.Text);
-              ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'consultant.aspx'})", true);
+                if (state.SelectedIndex != 0)
+                {
+                    dt = moduledata.autono("DrID", 5);
+                    if (dt.Rows.Count > 0)
+                    {
+                        string length = dt.Rows[0]["length"].ToString();
+                        autono.Value = dt.Rows[0]["isauto"].ToString();
+                        if (dt.Rows[0]["isauto"].ToString() == "No")
+                        {
+                            doctorid.Enabled = true;
+                        }
+                        else
+                        {
+                            dt = moduledata.autono("DrID", 5);
+                            doctorid.Text = dt.Rows[0][0].ToString();
+                            doctorid.Enabled = false;
+                        }
+                    }
+                    moduledata.consultantsave(doctorid.Text, doctorname.Text, licenceno.Text, specialization.Text, designation.Text, qualification.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, city.Text, state.SelectedValue, shift.SelectedValue, date.Text);
+                    if (autono.Value == "Yes")
+                    {
+                        moduledata.autonoplus("DrID");
+                    }
+                }
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'consultant.aspx'})", true);
             }
             catch (Exception ex)
             {
@@ -58,7 +85,7 @@ namespace hospitalproject.modules
                     email.Text = dt.Rows[0]["email"].ToString();
                     address.Text = dt.Rows[0]["address"].ToString();
                     city.Text = dt.Rows[0]["city"].ToString();
-                    state.Text = dt.Rows[0]["state"].ToString();
+                    state.SelectedValue = dt.Rows[0]["state"].ToString();
                     shift.Text = dt.Rows[0]["visittype"].ToString();
                     date.Text = dt.Rows[0]["date"].ToString();
                 }

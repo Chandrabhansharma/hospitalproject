@@ -79,19 +79,19 @@
     <Content Include="opd\opddashboard.aspx" />
     <Content Include="opd\opdregistration.aspx" />
     <Content Include="opd\prescription.aspx" />
-    <Content Include="support\CSS\bootstrap.css" />
-    <Content Include="support\CSS\dataTables.css" />
-    <Content Include="support\CSS\font-awesome.css" />
-    <Content Include="support\CSS\style.css" />
-    <Content Include="support\CSS\sweetalert.min.css" />
+    <Content Include="support\css\bootstrap.css" />
+    <Content Include="support\css\dataTables.css" />
+    <Content Include="support\css\font-awesome.css" />
+    <Content Include="support\css\style.css" />
+    <Content Include="support\css\sweetalert.min.css" />
     <Content Include="support\fonts\fontawesome-webfont.svg" />
     <Content Include="support\image\hospitallogo.jpg" />
     <Content Include="support\image\login1.jpeg" />
     <Content Include="support\image\logo1.jpeg" />
-    <Content Include="support\JS\bootstrap.bundle.js" />
-    <Content Include="support\JS\dataTables.min.js" />
-    <Content Include="support\JS\jquery-3.3.1.min.js" />
-    <Content Include="support\JS\sweetalert.min.js" />
+    <Content Include="support\js\bootstrap.bundle.min.js" />
+    <Content Include="support\js\dataTables.min.js" />
+    <Content Include="support\js\jquery-3.3.1.min.js" />
+    <Content Include="support\js\sweetalert.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

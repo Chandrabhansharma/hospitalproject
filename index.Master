@@ -9,87 +9,89 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="support/CSS/bootstrap.css" rel="stylesheet" />
-    <link href="support/CSS/font-awesome.css" rel="stylesheet" />
-    <link href="support/CSS/dataTables.css" rel="stylesheet" />
-     <link href="support/CSS/style.css" rel="stylesheet" />    
-    <link href="support/CSS/sweetalert.min.css" rel="stylesheet" />
-
+    <link href="support/css/bootstrap.css" rel="stylesheet" />
+    <link href="support/css/font-awesome.css" rel="stylesheet" />
+    <link href="support/css/scsweetalert.min.css" rel="stylesheet" />
+    <link href="support/css/dataTables.css" rel="stylesheet" />
+    <link href="support/css/style.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-          <!--section1 start-->
+        <!--section1 start-->
         <div class="container-fluid m-0 p-2 border-bottom border-dark bg-black text-white">
             <div class="container">
                 <div class="row font-weight-bold">
-                  
-                <div class="col-md-1">               
-                    <img src="support/image/hospitallogo.jpg" runat="server" id="logo" height="60" width="70"/>
-                </div>
-                 <div class="col-md-6">
-                   <asp:Label ID="hname" CssClass="title" runat="server" Text="Hospital"></asp:Label>
+
+                    <div class="col-md-1">
+                        <img src="support/image/hospitallogo.jpg" runat="server" id="logo" height="60" width="70" />
+                    </div>
+                    <div class="col-md-6">
+                        <asp:Label ID="hname" CssClass="title" runat="server" Text="Hospital"></asp:Label>
+
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-2">
+                        <br />
+                        <asp:Label ID="username" runat="server" CssClass="float-end" Text="User"></asp:Label>
+                    </div>
+                    <div class="col-md-1">
+                        <br />
+                        <asp:LinkButton ID="logout" runat="server" href="default.aspx" Text="<i class='fa fa-lock text-white'></i>" CssClass="btn  p-0 float-end"></asp:LinkButton>
+
+                    </div>
 
                 </div>
-                     <div class="col-md-2">
-                </div>
-                 <div class="col-md-2"><br />
-                      <asp:Label ID="username" runat="server" CssClass="float-end" Text="User"></asp:Label>
-                </div>
-                 <div class="col-md-1"><br />
-                     <asp:LinkButton ID="logout" runat="server" href="default.aspx"  Text="<i class='fa fa-lock text-white'></i>" CssClass="btn  p-0 float-end"></asp:LinkButton>
-                     
-                </div>
-
             </div>
         </div>
-        </div>
         <!--section1 end-->
-        
+
         <!--section2 start-->
- <div class="container-fluid m-0 p-1 border-bottom navbg">
+        <div class="container-fluid m-0 p-1 border-bottom navbg">
             <div class="container">
-              <nav class="navbar navbar-expand-lg ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="../Dashboard.aspx"><i class="fa fa-home text-black"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-             <li class="nav-item">
-          <a class="nav-link" href="../modules/moduledashboard.aspx">Modules</a>
-        </li>
-       <li class="nav-item">
-          <a class="nav-link" href="../opd/opddashboard.aspx">OPD</a>
-        </li>
-      </ul>     
-    </div>
-  </div>
-</nav>
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="../Dashboard.aspx"><i class="fa fa-home text-black"></i></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../modules/moduledashboard.aspx">Modules</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../opd/opddashboard.aspx">OPD</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
-        </div>
-        
+        <asp:ScriptManager ID="sc" runat="server">
+        </asp:ScriptManager>
+        <script src="../support/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="../support/js/bootstrap.bundle.min.js"></script>
+        <script src="../support/js/dataTables.min.js" type="text/javascript"></script>
+        <script src="../support/js/sweetalert.min.js" type="text/javascript"></script>
         <!--section2 end-->
         <div>
-      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <script src="support/JS/jquery-3.3.1.min.js"></script>
-        <script src="support/JS/bootstrap.bundle.js"></script>
-        
-        <script src="support/JS/dataTables.min.js"></script>
-        <script src="support/JS/sweetalert.min.js"></script>
+
 
     </form>
 </body>
-     <script>
-        $(document).ready(function () {
-            $('#grddata').DataTable();
-            $('#grddata').prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable();
-            $('.js-example-basic-multiple').select2();
-            $('.js-example-basic-single').select2();
-            Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
-            function BeginRequestHandler(sender, args) { var oControl = args.get_postBackElement(); oControl.disabled = true; oControl.value = "Wait..." }
-        });
-     </script>
+<script>
+    $(document).ready(function () {
+        $('#grddata').DataTable();
+        $('#grddata').prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable();
+        $('.js-example-basic-multiple').select2();
+        $('.js-example-basic-single').select2();
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
+        function BeginRequestHandler(sender, args) { var oControl = args.get_postBackElement(); oControl.disabled = true; oControl.value = "Wait..." }
+    });
+</script>
 </html>

@@ -49,7 +49,7 @@ namespace hospitalproject.API
         [WebMethod]
         public void consultantsave(string doctorid, string doctorname, string licenceno, string specialization, string designation, string qualification, string mobilenumber, string mobilenumber2, string email, string address, string city, string state, string shift, string date)
         {
-            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into consultant(doctorid,doctorname,licenceno,specialization,designation,qualification,mobilenumber,mobilenumber2,email,address,city,state,shift,date) values('" + pcase.ToTitleCase(doctorid) + "','" + doctorname + "','" + licenceno + "','" + specialization + "','" + designation + "','" + qualification + "','" + mobilenumber + "','" + mobilenumber2 + "','" + email + "','" + address + "', '" + city + "', '" + state + "', '" + shift + "', '" + date + "')");
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into consultant(doctorid,doctorname,licenceno,specialization,designation,qualification,mobilenumber,mobilenumber2,emailid,address,city,state,shift,date) values('" + pcase.ToTitleCase(doctorid) + "','" + doctorname + "','" + licenceno + "','" + specialization + "','" + designation + "','" + qualification + "','" + mobilenumber + "','" + mobilenumber2 + "','" + email + "','" + address + "', '" + city + "', '" + state + "', '" + shift + "', '" + date + "')");
         }
         [WebMethod]
         public void consultantdelete(string sn)
@@ -92,6 +92,19 @@ namespace hospitalproject.API
         {
             SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from disease where sn ='" + sn + "'");
         }
-
+        [WebMethod]
+        public DataTable autono(string schemename, int length)
+        {
+            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select (prefix+seprator+RIGHT(padding+CAST(currentno+1 as varchar(" + length + "))," + length + "))PERSISTED,length,isauto from autono where  scheme='" + schemename + "'");
+        }
+        [WebMethod]
+        public DataTable state()
+        {
+            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select state from state order by state");
+        }
+        public void autonoplus(string scheme)
+        {
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "update autono set currentno=currentno+1 where scheme='" + scheme + "' ");
+        }
     }
 }

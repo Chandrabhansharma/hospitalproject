@@ -32,8 +32,8 @@ namespace hospitalproject.modules
                     logopath = "~/photo/Hospital" + hospitalname.Text + ".jpg";
                 }
                 moduledata.hospitalsave(hospitalname.Text, slogan.Text, mobileno.Text, mobileno2.Text, emailid.Text, website.Text, medicalcouncil.Text, Convert.ToInt32(medicalregno.Text), address1.Text, address2.Text, pincode.Text, city.Text, state.SelectedValue, country.SelectedValue, logopath.ToString());
-                // Response.Write("Save Successfully !!!");
-                // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
+             //   Response.Write("Save Successfully !!!");
+               // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'hospital.aspx'})", true);
             }
             catch (Exception ex)

@@ -39,7 +39,7 @@
              <div class="col-md-3">
                            City<asp:TextBox ID="city" runat="server" CssClass="form-control"></asp:TextBox>
                         </div> <div class="col-md-3">
-                           State<asp:TextBox ID="state" runat="server" CssClass="form-control"></asp:TextBox>
+                           State<asp:DropDownList ID="state" runat="server" CssClass="form-control"></asp:DropDownList>
                         </div>
             <div class="col-md-3">
                          Shift <asp:DropDownList ID="shift" runat="server" CssClass="form-control">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-         
+         <asp:HiddenField ID="autono" runat="server" />
 
      <div class="row m-0 p-0 border-0 fw-bold table-responsive card-body">
             <asp:GridView ID="grddata" GridLines="None" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="grddata_PreRender" OnRowCommand="grddata_RowCommand" HeaderStyle-BackColor="Teal" HeaderStyle-ForeColor="White" runat="server" CssClass="table table-hover table-bordered">
@@ -72,7 +72,7 @@
                     <asp:BoundField HeaderText="Qualification" DataField="qualification" />
                     <asp:BoundField HeaderText="Mobile Number" DataField="mobilenumber" />
                     <asp:BoundField HeaderText="Mobile Number(Alternate)" DataField="mobilenumber2" />
-                    <asp:BoundField HeaderText="Email" DataField="email" />
+                    <asp:BoundField HeaderText="Email" DataField="emailid" />
                     <asp:BoundField HeaderText="Address" DataField="address" />
                     <asp:BoundField HeaderText="City" DataField="city" />
                     <asp:BoundField HeaderText="State" DataField="state" />

@@ -7,9 +7,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="support/CSS/bootstrap.css" rel="stylesheet" />
-<link href="support/CSS/font-awesome.css" rel="stylesheet" />
-<link href="support/CSS/Style.css" rel="stylesheet" />
+<link href="support/css/bootstrap.css" rel="stylesheet" />
+<link href="support/css/font-awesome.css" rel="stylesheet" />
+<link href="support/css/Style.css" rel="stylesheet" />
 <title>Default Login</title>
  <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
