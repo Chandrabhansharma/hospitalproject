@@ -67,21 +67,11 @@
                     </div>
                     <div class="col-md-3">
                         State
-                        <asp:DropDownList ID="state" runat="server" CssClass="form-control">
-                            <asp:ListItem>Uttarakhand</asp:ListItem>
-                            <asp:ListItem>Uttar Pradesh</asp:ListItem>
-                            <asp:ListItem>Haryana</asp:ListItem>
-                            <asp:ListItem>Goa</asp:ListItem>
-                        </asp:DropDownList>
+                        <asp:DropDownList ID="state" runat="server" CssClass="form-control"> </asp:DropDownList>
                     </div>
                     <div class="col-md-3">
                         Country 
-                        <asp:DropDownList ID="country" runat="server" CssClass="form-control">
-                            <asp:ListItem>India</asp:ListItem>
-                            <asp:ListItem>Pakistan</asp:ListItem>
-                            <asp:ListItem>Japanies</asp:ListItem>
-                            <asp:ListItem>China</asp:ListItem>
-                        </asp:DropDownList>
+                        <asp:TextBox ID="country" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <!--COUNTRY END-->
                     <div class="col-md-3">

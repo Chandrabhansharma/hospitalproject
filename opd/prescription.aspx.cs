@@ -13,36 +13,44 @@ namespace hospitalproject.opd
 {
     public partial class prescription : System.Web.UI.Page
     {
+        API.opd prescriptiondata = new API.opd();
         API.opd opddata = new API.opd();
         DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                date.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                followup.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                dt = opddata.prescriptionsearch("%");
+                dt = prescriptiondata.prescriptionsearch("%");
                 grddata.DataSource = dt;
                 grddata.DataBind();
+                data();
+                dt = opddata.opdregistrationsearch("%");
+                patientno.DataSource = dt.DefaultView.ToTable(true, "patientno");
+                patientno.DataTextField = "patientno";
+                patientno.DataValueField = "patientno";
+                patientno.DataBind();
+                patientno.Items.Insert(0, "---Select---");
+
+                dt = opddata.opdregistrationsearch("%");
+                patientname.DataSource = dt.DefaultView.ToTable(true, "patientname");
+                patientname.DataTextField = "patientname";
+                patientname.DataValueField = "patientname";
+                patientname.DataBind();
+                patientname.Items.Insert(0, "---Select---");
 
             }
         }
-        string signaturepath = "";
+        
         private void data()
         {
-            date.Text = DateTime.Now.ToString("yyyy-MM-dd");
             followup.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
         protected void submit_Click(object sender, EventArgs e)
         {
             try
             {
-                if (signature.PostedFile.ContentLength > 1)
-                {
-                    signature.SaveAs(Server.MapPath("~/photo/Signature" + name.Text + ".jpg"));
-                    signaturepath = "~/photo/Signature" + name.Text + ".jpg";
-                }
-                opddata.prescriptionsubmit(doctorid.Text,doctorname.Text,qualification.Text,specialization.Text,phonenumber.Text,patientno.Text, patientname.Text, age.Text, gender.SelectedValue, mobilenumber.Text, address.Text,date.Text, height.Text, weight.Text,bloodpressure.Text,temperature.Text,Symptoms.Text,medicinecompanyname.Text,medicinename.Text,dosage.Text,duration.Text,testing.Text, avoid.Text, followup.Text, signaturepath.ToString(), name.Text);
+               
+                prescriptiondata.prescriptionsubmit(patientno.SelectedValue, patientname.SelectedValue,medicinename.Text,dosage.Text,duration.Text,testing.Text, avoid.Text, followup.Text);
                 // Response.Write("Save Successfully !!!");
                 // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'prescription.aspx'})", true);
@@ -59,38 +67,19 @@ namespace hospitalproject.opd
             {
                 if (e.CommandName == "btnedt")
                 {
-                    dt = opddata.prescriptionsearch(e.CommandArgument.ToString());
-                    doctorid.Text = dt.Rows[0]["doctorid"].ToString();
-                    doctorname.Text = dt.Rows[0]["doctorname"].ToString();
-                    qualification.Text = dt.Rows[0]["qualification"].ToString();
-                    specialization.Text = dt.Rows[0]["specilazation"].ToString();
-                    phonenumber.Text = dt.Rows[0]["phonenumber"].ToString();
+                    dt = prescriptiondata.prescriptionsearch(e.CommandArgument.ToString());
                     patientno.Text = dt.Rows[0]["patientno"].ToString();
                     patientname.Text = dt.Rows[0]["patientname"].ToString();
-                    age.Text = dt.Rows[0]["age"].ToString();
-                    gender.Text = dt.Rows[0]["gender"].ToString();
-                    mobilenumber.Text = dt.Rows[0]["mobilenumber"].ToString();
-                    date.Text = dt.Rows[0]["date"].ToString();
-                    address.Text = dt.Rows[0]["address"].ToString();
-                    height.Text = dt.Rows[0]["height"].ToString();
-                    weight.Text = dt.Rows[0]["weight"].ToString();
-                    bloodpressure.Text = dt.Rows[0]["bloodpressure"].ToString();
-                    temperature.Text = dt.Rows[0]["temperature"].ToString();
-
-                    Symptoms.Text = dt.Rows[0]["symptoms"].ToString();
-                    medicinecompanyname.Text = dt.Rows[0]["medicinecompanyname"].ToString();
                     medicinename.Text = dt.Rows[0]["medicinename"].ToString();
                     dosage.Text = dt.Rows[0]["dosage"].ToString();
                     duration.Text = dt.Rows[0]["duration"].ToString();
                     testing.Text = dt.Rows[0]["testing"].ToString();
                     avoid.Text = dt.Rows[0]["avoid"].ToString();
                     followup.Text = dt.Rows[0]["followup"].ToString();
-                   
-
                 }
                 else
                 {
-                    opddata.prescriptiondelete(e.CommandArgument.ToString());
+                    prescriptiondata.prescriptiondelete(e.CommandArgument.ToString());
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Delete Successfully !!!', 'success').then((value) => {window.location = 'prescription.aspx'})", true);
                 }
             }

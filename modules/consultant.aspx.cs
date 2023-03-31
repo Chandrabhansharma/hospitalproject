@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace hospitalproject.modules
 {
@@ -22,6 +23,7 @@ namespace hospitalproject.modules
                 data();
             }
         }
+        string signaturepath = "";
         private void data()
         {
             date.Text = DateTime.Now.ToString("yyyy-MM-dd");
@@ -36,6 +38,11 @@ namespace hospitalproject.modules
         {
             try
             {
+                if (signature.PostedFile.ContentLength > 1)
+                {
+                    signature.SaveAs(Server.MapPath("~/photo/Signature" + doctorname.Text + ".jpg"));
+                    signaturepath = "~/photo/Signature" + doctorname.Text + ".jpg";
+                }
                 if (state.SelectedIndex != 0)
                 {
                     dt = moduledata.autono("DrID", 5);
@@ -54,7 +61,7 @@ namespace hospitalproject.modules
                             doctorid.Enabled = false;
                         }
                     }
-                    moduledata.consultantsave(doctorid.Text, doctorname.Text, licenceno.Text, specialization.Text, designation.Text, qualification.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, city.Text, state.SelectedValue, shift.SelectedValue, date.Text);
+                    moduledata.consultantsave(doctorid.Text, doctorname.Text, licenceno.Text, specialization.Text, designation.Text, qualification.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, city.Text, state.SelectedValue, shift.SelectedValue, date.Text, signaturepath.ToString());
                     if (autono.Value == "Yes")
                     {
                         moduledata.autonoplus("DrID");

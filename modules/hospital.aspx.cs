@@ -19,21 +19,34 @@ namespace hospitalproject.modules
                 dt = moduledata.hospitalsearch("%", "%");
                 grddata.DataSource = dt;
                 grddata.DataBind();
+                data();
             }
+        }
+        private void data()
+        {
+            dt = moduledata.state();
+            state.DataSource = dt;
+            state.DataTextField = "state";
+            state.DataValueField = "state";
+            state.DataBind();
+            state.Items.Insert(0, new ListItem("---Select---", "---Select---"));
         }
         string logopath = "";
         protected void save_Click(object sender, EventArgs e)
         {
             try
             {
-                if (logo.PostedFile.ContentLength > 1)
+                if (state.SelectedIndex != 0)
                 {
-                    logo.SaveAs(Server.MapPath("~/photo/Hospital" + hospitalname.Text + ".jpg"));
-                    logopath = "~/photo/Hospital" + hospitalname.Text + ".jpg";
+                    if (logo.PostedFile.ContentLength > 1)
+                    {
+                        logo.SaveAs(Server.MapPath("~/photo/Hospital" + hospitalname.Text + ".jpg"));
+                        logopath = "~/photo/Hospital" + hospitalname.Text + ".jpg";
+                    }
+                    moduledata.hospitalsave(hospitalname.Text, slogan.Text, mobileno.Text, mobileno2.Text, emailid.Text, website.Text, medicalcouncil.Text, Convert.ToInt32(medicalregno.Text), address1.Text, address2.Text, pincode.Text, city.Text, state.SelectedValue, country.Text, logopath.ToString());
+                    //   Response.Write("Save Successfully !!!");
+                    // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
                 }
-                moduledata.hospitalsave(hospitalname.Text, slogan.Text, mobileno.Text, mobileno2.Text, emailid.Text, website.Text, medicalcouncil.Text, Convert.ToInt32(medicalregno.Text), address1.Text, address2.Text, pincode.Text, city.Text, state.SelectedValue, country.SelectedValue, logopath.ToString());
-             //   Response.Write("Save Successfully !!!");
-               // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'hospital.aspx'})", true);
             }
             catch (Exception ex)

@@ -50,14 +50,17 @@
              <div class="col-md-3">
                           Date<asp:TextBox ID="date" runat="server" TextMode="Date"  CssClass="form-control"></asp:TextBox>
                         </div>
+             <div class="col-md-3">
+                          Signature<asp:FileUpload ID="signature" runat="server" CssClass="form-control"></asp:FileUpload>
+                        </div>
            
-                   <div class="col-md-6"></div>
+                   <div class="col-md-3"></div>
                         <div class="col-md-2 mt-1">
                             <br />
 <asp:Button ID="save" runat="server" Text="Save"  OnClick="save_Click" CssClass="btn w-100" />
                         </div>
                     </div>
-                </div>
+              
             </div>
          <asp:HiddenField ID="autono" runat="server" />
 
@@ -78,6 +81,7 @@
                     <asp:BoundField HeaderText="State" DataField="state" />
                     <asp:BoundField HeaderText="Shift" DataField="shift" />
                     <asp:BoundField HeaderText="Date" DataField="date" ItemStyle-Width="150" DataFormatString="{0:dd/MM/yyyy}"/>
+                     <asp:BoundField HeaderText="Signature" DataField="signature" />
                    <asp:TemplateField>
                         <ItemTemplate>
                             <asp:LinkButton ID="btnedt" runat="server" CommandName="btnedt" Text="<i class='fa fa-pencil text-sucess'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
