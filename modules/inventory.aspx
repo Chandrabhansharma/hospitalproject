@@ -12,6 +12,9 @@
             <div class="col-md-3">
        Product Name<br /><asp:TextBox ID="productname" runat="server" CssClass="form-control"></asp:TextBox>
        </div>
+                <div class="col-md-3">
+       Product Category<br /><asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+       </div>
       <div class="col-md-3">
       Purchase Date<br /><asp:TextBox ID="purchasedate" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
        </div>
