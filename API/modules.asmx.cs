@@ -27,11 +27,18 @@ namespace hospitalproject.API
                 return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from hospital where sn like'" + sn + "' and hospitalname like'" + hospitalname + "'");
             }
         }
+
         [WebMethod]
         public void hospitalsave(string hospitalname, string slogan, string mobileno, string mobileno2, string emailid, string website, string medicalcouncil, int medicalregno, string address1, string address2, string city, string state, string country, string pincode, string logo)
         {
             SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into hospital(hospitalname, slogan,mobileno,mobileno2, emailid,website,medicalcouncil,medicalregno ,address1, address2,pincode, city, state, country,logo) values('" + pcase.ToTitleCase(hospitalname) + "','" + slogan + "','" + mobileno + "','" + mobileno2 + "','" + emailid + "','" + website + "','" + medicalcouncil + "','" + medicalregno + "','" + address1 + "','" + address2 + "','" + pincode + "','" + city + "','" + state + "','" + country + "','" + logo + "')");
         }
+        [WebMethod]
+        public void hospitalupdate(string hospitalname, string slogan, string mobileno, string mobileno2, string emailid, string website, string medicalcouncil, int medicalregno, string address1, string address2, string city, string state, string country, string pincode, string logo)
+        {
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into hospital(hospitalname, slogan,mobileno,mobileno2, emailid,website,medicalcouncil,medicalregno ,address1, address2,pincode, city, state, country,logo) values('" + pcase.ToTitleCase(hospitalname) + "','" + slogan + "','" + mobileno + "','" + mobileno2 + "','" + emailid + "','" + website + "','" + medicalcouncil + "','" + medicalregno + "','" + address1 + "','" + address2 + "','" + pincode + "','" + city + "','" + state + "','" + country + "','" + logo + "')");
+        }
+
         [WebMethod]
         public void hospitaldelete(string sn)
         {
