@@ -6,8 +6,8 @@
             <a href="moduledashboard.aspx"> <i class="fa fa-arrow-left text-black"></i></a>CONSULTANT</div>
         <div class="col-md-12">
         <div class="row p-2">
-             <div class="col-md-3">
-       Doctor ID<br /><asp:TextBox ID="doctorid" runat="server" CssClass="form-control"></asp:TextBox>
+             <div class="col-md-3">Doctor ID
+     <br /><asp:Label ID="doctorid" runat="server" Text="Doctor ID" CssClass="form-control"></asp:Label>
        </div>
             <div class="col-md-3">
        Doctor Name<br /><asp:TextBox ID="doctorname" runat="server" CssClass="form-control"></asp:TextBox>
@@ -57,7 +57,7 @@
                    <div class="col-md-3"></div>
                         <div class="col-md-2 mt-1">
                             <br />
-<asp:Button ID="save" runat="server" Text="Save"  OnClick="save_Click" CssClass="btn w-100" />
+<asp:Button ID="save" runat="server" Text="SAVE" CssClass="btn w-100" OnClick="save_Click" />
                         </div>
                     </div>
               
@@ -90,6 +90,7 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
+        </div>
         </div>
         </div>
 </asp:Content>
