@@ -75,6 +75,7 @@
     <Content Include="modules\consultant.aspx" />
     <Content Include="modules\disease.aspx" />
     <Content Include="modules\hospital.aspx" />
+    <Content Include="modules\inventory.aspx" />
     <Content Include="modules\moduledashboard.aspx" />
     <Content Include="opd\opddashboard.aspx" />
     <Content Include="opd\opdregistration.aspx" />
@@ -152,6 +153,13 @@
     </Compile>
     <Compile Include="modules\hospital.aspx.designer.cs">
       <DependentUpon>hospital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\inventory.aspx.cs">
+      <DependentUpon>inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\inventory.aspx.designer.cs">
+      <DependentUpon>inventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="modules\module.master.cs">
       <DependentUpon>module.master</DependentUpon>
