@@ -57,7 +57,7 @@
                    <div class="col-md-3"></div>
                         <div class="col-md-2 mt-1">
                             <br />
-<asp:Button ID="save" runat="server" Text="Save"  OnClick="save_Click" CssClass="btn w-100" />
+<asp:Button ID="save" runat="server" Text="SAVE" CssClass="btn w-100" OnClick="save_Click" />
                         </div>
                     </div>
               
