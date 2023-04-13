@@ -12,8 +12,8 @@
              <div class="row p-2">
                     <div class="col-md-3">
                         Patient No.<br />
-                        <asp:TextBox ID="patientno" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
+                       <asp:Label ID="patientno" runat="server" Text="Patient No." CssClass="form-control"></asp:Label>
+       </div>
                     <div class="col-md-3">
                         Patient Name<br />
                         <asp:TextBox ID="patientname" runat="server" CssClass="form-control"></asp:TextBox>
@@ -94,9 +94,7 @@
                         <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn w-100 btn-success " OnClick="submit_Click" />
                     </div>
                 </div>
-           
-        </div>
-
+          <asp:HiddenField ID="autono" runat="server" />
     <div class="row m-0 p-0 border-0 fw-bold table-responsive card-body">
         <asp:GridView ID="grddata" GridLines="None" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="grddata_PreRender" OnRowCommand="grddata_RowCommand" HeaderStyle-BackColor="Teal" HeaderStyle-ForeColor="White" runat="server" CssClass="table table-hover table-bordered">
             <Columns>
@@ -121,13 +119,13 @@
                 <asp:BoundField HeaderText="Remark" DataField="remark" />
                 <asp:TemplateField>
                     <ItemTemplate>
-                        <asp:LinkButton ID="btnedt" runat="server" CommandName="btnedt" Text="<i class='fa fa-pencil text-sucess'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
-                        <asp:LinkButton ID="btndlt" runat="server" OnClientClick="return confirm('Are you sure you want to delete this record?');" CommandName="btndlt" Text="<i class='fa fa-close text-danger'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
+                        <asp:LinkButton ID="btnedt" runat="server" CommandName="btnedt" Text="<i class='fa fa-pencil text-sucess'></i>" CommandArgument='<%# Eval("registrationid") %>'></asp:LinkButton>
+                        <asp:LinkButton ID="btndlt" runat="server" OnClientClick="return confirm('Are you sure you want to delete this record?');" CommandName="btndlt" Text="<i class='fa fa-close text-danger'></i>" CommandArgument='<%# Eval("registrationid") %>'></asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
     </div>
-   
+   </div>
 
 </asp:Content>

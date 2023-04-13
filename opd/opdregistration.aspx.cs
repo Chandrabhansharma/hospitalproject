@@ -38,15 +38,35 @@ namespace hospitalproject.opd
         }
         protected void submit_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
+                dt = opddata.autono("PtNo", 5);
+                if (dt.Rows.Count > 0)
+                {
+                    string length = dt.Rows[0]["length"].ToString();
+                    autono.Value = dt.Rows[0]["isauto"].ToString();
+                    if (dt.Rows[0]["isauto"].ToString() == "No")
+                    {
+                        patientno.Enabled = true;
+                    }
+                    else
+                    {
+                        dt = opddata.autono("DrID", 5);
+                        patientno.Text = dt.Rows[0][0].ToString();
+                        patientno.Enabled = false;
+                    }
+                }
                 opddata.opdregistrationsubmit(patientno.Text, patientname.Text, age.Text, gender.SelectedValue, date.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, doctorname.SelectedValue, specialization.SelectedValue, visitetype.SelectedValue, fee.Text, height.Text, weight.Text, bloodpressure.Text, temperature.Text, remark.Text);
+                if (autono.Value == "Yes")
+                {
+                    opddata.autonoplus("PtNo");
+                }
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'opdregistration.aspx'})", true);
-            //}
-            //catch (Exception ex)
-            //{
-            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
-            //}
+            }
+            catch (Exception ex)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
+            }
         }
         protected void grddata_RowCommand(object sender, GridViewCommandEventArgs e)
         {

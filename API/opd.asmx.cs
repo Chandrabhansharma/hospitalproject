@@ -57,6 +57,19 @@ namespace hospitalproject.API
         {
             SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from prescription where sn='" + sn + "'");
         }
-
+        [WebMethod]
+        public DataTable autono(string schemename, int length)
+        {
+            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select (prefix+seprator+RIGHT(padding+CAST(currentno+1 as varchar(" + length + "))," + length + "))PERSISTED,length,isauto from autono where  scheme='" + schemename + "'");
+        }
+        [WebMethod]
+        public DataTable state()
+        {
+            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select state from state order by state");
+        }
+        public void autonoplus(string scheme)
+        {
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "update autono set currentno=currentno+1 where scheme='" + scheme + "' ");
+        }
     }
 }
