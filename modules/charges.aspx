@@ -25,7 +25,9 @@
                         Charges<br />
                         <asp:TextBox ID="fee" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
-                    <div class="col-md-12"></div>
+                    <div class="col-md-12">
+
+                    </div>
                     <div class="col-md-3 p-1">
                         <br />
                         <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn w-25 btn-success " OnClick="submit_Click" />
