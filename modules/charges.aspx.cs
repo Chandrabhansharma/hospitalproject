@@ -27,26 +27,12 @@ namespace hospitalproject.modules
                 grddata.DataSource = dt;
                 grddata.DataBind();
 
-                dt = consultantdata.consultantsearch("%", "%");
-                doctorid.DataSource = dt.DefaultView.ToTable(true, "doctorid");
-                doctorid.DataTextField = "doctorid";
+                dt = consultantdata.consulatntdata();
+                doctorid.DataSource = dt;
+                doctorid.DataTextField = "drname";
                 doctorid.DataValueField = "doctorid";
                 doctorid.DataBind();
                 doctorid.Items.Insert(0, "---Select---");
-
-                dt = consultantdata.consultantsearch("%", "%");
-                doctorname.DataSource = dt.DefaultView.ToTable(true, "doctorname");
-                doctorname.DataTextField = "doctorname";
-                doctorname.DataValueField = "doctorname";
-                doctorname.DataBind();
-                doctorname.Items.Insert(0, "---Select---");
-
-                dt = consultantdata.consultantsearch("%", "%");
-                specialization.DataSource = dt.DefaultView.ToTable(true, "specialization");
-                specialization.DataTextField = "specialization";
-                specialization.DataValueField = "specialization";
-                specialization.DataBind();
-                specialization.Items.Insert(0, "---Select---");
             }
         }
         private void data()
@@ -55,9 +41,8 @@ namespace hospitalproject.modules
         }
         protected void submit_Click(object sender, EventArgs e)
         {
-            chargesdata.chargessave(doctorid.Text,doctorname.Text, specialization.Text,date.Text,visittype.Text,Convert.ToInt32(fee.Text));
+            chargesdata.chargessave(doctorid.Text,date.Text,visittype.Text,Convert.ToInt32(fee.Text));
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Sucessfully!!!', 'success').then((value) => { window.location = 'charges.aspx'})", true);
-
         }
         protected void grddata_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -67,12 +52,8 @@ namespace hospitalproject.modules
                 {
                     dt = chargesdata.chargessearch(e.CommandArgument.ToString(), "%");
                     doctorid.SelectedValue = dt.Rows[0]["doctorid"].ToString();
-                    doctorname.SelectedValue = dt.Rows[0]["doctorname"].ToString();
-                    specialization.Text = dt.Rows[0]["specialization"].ToString();
-                    
                     visittype.Text = dt.Rows[0]["visittype"].ToString();
                     fee.Text = dt.Rows[0]["fee"].ToString();
-                    
                 }
                 else
                 {
@@ -84,7 +65,6 @@ namespace hospitalproject.modules
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
             }
-
         }
         protected void grddata_PreRender(object sender, EventArgs e)
         {
@@ -94,7 +74,9 @@ namespace hospitalproject.modules
                 grddata.HeaderRow.TableSection = TableRowSection.TableHeader;
                 grddata.FooterRow.TableSection = TableRowSection.TableFooter;
             }
-
+        }
+        protected void doctorid_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

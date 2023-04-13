@@ -82,6 +82,7 @@
     <Content Include="support\css\bootstrap.css" />
     <Content Include="support\css\dataTables.css" />
     <Content Include="support\css\font-awesome.css" />
+    <Content Include="support\css\select2.css" />
     <Content Include="support\css\style.css" />
     <Content Include="support\css\sweetalert.min.css" />
     <Content Include="support\fonts\fontawesome-webfont.svg" />
@@ -91,6 +92,7 @@
     <Content Include="support\js\bootstrap.bundle.min.js" />
     <Content Include="support\js\dataTables.min.js" />
     <Content Include="support\js\jquery-3.3.1.min.js" />
+    <Content Include="support\js\select2.min.js" />
     <Content Include="support\js\sweetalert.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>

@@ -24,24 +24,6 @@ namespace hospitalproject.modules
         protected global::System.Web.UI.WebControls.DropDownList doctorid;
 
         /// <summary>
-        /// doctorname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList doctorname;
-
-        /// <summary>
-        /// specialization control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList specialization;
-
-        /// <summary>
         /// date control.
         /// </summary>
         /// <remarks>

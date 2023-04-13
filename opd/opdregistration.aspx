@@ -52,7 +52,7 @@
              <div class="row p-2">
                     <div class="col-md-3">
                         Doctor Name
-                        <asp:DropDownList ID="doctorname" runat="server" CssClass="form-control"></asp:DropDownList>
+                        <asp:DropDownList ID="doctorname" runat="server" ClientIDMode="Static" AutoPostBack="true" OnSelectedIndexChanged="doctorname_SelectedIndexChanged" CssClass="form-control js-example-basic-single "></asp:DropDownList>                        
                     </div>
                     <div class="col-md-3">
                         Specialization
@@ -60,9 +60,7 @@
                     </div>
                     <div class="col-md-3">
                         Visit Type
-                        <asp:DropDownList ID="visitetype" runat="server" CssClass="form-control">
-                            <asp:ListItem>Normal</asp:ListItem>
-                            <asp:ListItem>Emergency</asp:ListItem>
+                        <asp:DropDownList ID="visitetype" AutoPostBack="true" OnSelectedIndexChanged="visitetype_SelectedIndexChanged" runat="server" CssClass="form-control">                            
                         </asp:DropDownList>
                     </div>
                     <div class="col-md-3">

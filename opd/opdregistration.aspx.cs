@@ -24,26 +24,12 @@ namespace hospitalproject.opd
                 grddata.DataBind();
 
 
-                dt = consultantdata.consultantsearch("%", "%");
-                doctorname.DataSource = dt.DefaultView.ToTable(true, "doctorname");
-                doctorname.DataTextField = "doctorname";
-                doctorname.DataValueField = "doctorname";
+                dt = consultantdata.consulatntdata();
+                doctorname.DataSource = dt;
+                doctorname.DataTextField = "drname";
+                doctorname.DataValueField = "doctorid";
                 doctorname.DataBind();
                 doctorname.Items.Insert(0, "---Select---");
-
-                dt = consultantdata.consultantsearch("%", "%");
-                specialization.DataSource = dt.DefaultView.ToTable(true, "specialization");
-                specialization.DataTextField = "specialization";
-                specialization.DataValueField = "specialization";
-                specialization.DataBind();
-                specialization.Items.Insert(0, "---Select---");
-
-                dt = consultantdata.chargessearch("%", "%");
-                visitetype.DataSource = dt.DefaultView.ToTable(true, "visittype");
-                visitetype.DataTextField = "visittype";
-                visitetype.DataValueField = "visittype";
-                visitetype.DataBind();
-                visitetype.Items.Insert(0, "---Select---");
             }
         }
         private void data()
@@ -52,19 +38,16 @@ namespace hospitalproject.opd
         }
         protected void submit_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 opddata.opdregistrationsubmit(patientno.Text, patientname.Text, age.Text, gender.SelectedValue, date.Text, mobilenumber.Text, mobilenumber2.Text, email.Text, address.Text, doctorname.SelectedValue, specialization.SelectedValue, visitetype.SelectedValue, fee.Text, height.Text, weight.Text, bloodpressure.Text, temperature.Text, remark.Text);
-                // Response.Write("Save Successfully !!!");
-                // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'opdregistration.aspx'})", true);
-            }
-            catch (Exception ex)
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
+            //}
         }
-
         protected void grddata_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             try
@@ -81,7 +64,7 @@ namespace hospitalproject.opd
                     mobilenumber2.Text = dt.Rows[0]["mobilenumber2"].ToString();
                     email.Text = dt.Rows[0]["email"].ToString();
                     address.Text = dt.Rows[0]["address"].ToString();
-                   doctorname.Text = dt.Rows[0]["doctorname"].ToString();
+                    doctorname.Text = dt.Rows[0]["doctorname"].ToString();
                     specialization.Text = dt.Rows[0]["specilazation"].ToString();
                     visitetype.Text = dt.Rows[0]["visittype"].ToString();
                     fee.Text = dt.Rows[0]["fee"].ToString();
@@ -101,7 +84,6 @@ namespace hospitalproject.opd
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
             }
-
         }
         protected void grddata_PreRender(object sender, EventArgs e)
         {
@@ -113,7 +95,34 @@ namespace hospitalproject.opd
             }
         }
 
-       
+        protected void doctorname_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dt = consultantdata.consultantsearch("%", doctorname.SelectedValue);
+            specialization.DataSource = dt.DefaultView.ToTable(true, "specialization");
+            specialization.DataTextField = "specialization";
+            specialization.DataValueField = "specialization";
+            specialization.DataBind();
+            specialization.Items.Insert(0, "---Select---");
+            dt = consultantdata.chargessearch("%", doctorname.SelectedValue);
+            visitetype.DataSource = dt.DefaultView.ToTable(true, "visittype");
+            visitetype.DataTextField = "visittype";
+            visitetype.DataValueField = "visittype";
+            visitetype.DataBind();
+            visitetype.Items.Insert(0, "---Select---");
+        }
+
+        protected void visitetype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dt = consultantdata.drcharge(doctorname.SelectedValue,visitetype.SelectedValue,DateTime.Now.ToString("yyyy-MM-dd"));
+            if (dt.Rows.Count > 0)
+            {
+                fee.Text = dt.Rows[0]["fee"].ToString();
+            }
+            else
+            {
+                fee.Text="0";
+            }
+        }
     }
 }
 
