@@ -91,7 +91,7 @@
                     <div class="col-md-6"></div></div></div></div>
                     <div class="col-md-2 mt-1"><br />
 
-                        <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn w-100 btn-success " OnClick="submit_Click" />
+                        <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn w-100 btn-success" OnClick="submit_Click" />
                     </div>
                 </div>
           <asp:HiddenField ID="autono" runat="server" />

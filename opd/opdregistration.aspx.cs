@@ -51,7 +51,7 @@ namespace hospitalproject.opd
                     }
                     else
                     {
-                        dt = opddata.autono("DrID", 5);
+                        dt = opddata.autono("PtNo", 5);
                         patientno.Text = dt.Rows[0][0].ToString();
                         patientno.Enabled = false;
                     }
