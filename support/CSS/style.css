@@ -1,13 +1,15 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 body {
     font-family: 'Poppins', sans-serif !important;
+    
 }
-.title
-{
-    font-size:28px;
-    color:white;
-    float:left !important;
+
+.title {
+    font-size: 28px;
+    color: white;
+    float: left !important;
 }
+
 .navbar
 {
     padding:0px !important;
@@ -18,7 +20,8 @@ a{
     text-decoration:none !important;
 }
 .navbg {
-   background-color: #317d7d;
+    background-color: #317d7d;
+    
 }
 .ad 
 {
@@ -85,3 +88,4 @@ a{
         color: #fff;
         transform: translateY(-3px);
     }
+

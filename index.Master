@@ -15,11 +15,30 @@
     <link href="support/css/scsweetalert.min.css" rel="stylesheet" />
     <link href="support/css/dataTables.css" rel="stylesheet" />
     <link href="support/css/style.css" rel="stylesheet" />
+
+     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+     
+      body{
+         background-repeat: no-repeat;
+         background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+          
+      }
+    </style>
+
+
 </head>
-<body>
+
+<body background="../support/image/bg.jpeg" />
+
+
     <form id="form1" runat="server">
+        
         <!--section1 start-->
-        <div class="container-fluid m-0 p-2 border-bottom border-dark bg-black text-white">
+
+        <div class="container-fluid m-0 p-2 border-bottom border-dark bg-black text-black">
             <div class="container">
                 <div class="row font-weight-bold">
 
@@ -49,10 +68,13 @@
 
         <!--section2 start-->
         <div class="container-fluid m-0 p-1 border-bottom navbg">
+            
+            
+            
             <div class="container">
                 <nav class="navbar navbar-expand-lg ">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="../Dashboard.aspx"><i class="fa fa-home text-black"></i></a>
+                    <div class="container-fluid"> 
+                       <a class="navbar-brand" href="../Dashboard.aspx"><i class="fa fa-home text-black"></i></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -66,6 +88,7 @@
                                 </li>
                             </ul>
                         </div>
+                           
                     </div>
                 </nav>
             </div>

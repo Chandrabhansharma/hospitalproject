@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/modules/module.master" AutoEventWireup="true" CodeBehind="disease.aspx.cs" Inherits="hospitalproject.modules.disease" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="nestedContent" runat="server">
     <div class="container border p-2 card ">
+
         <div class="row m-0 border p-0">
             <div class="col-md-12 p-2 bg-info border-0 fw-bold card-header">
                 <a href="moduledashboard.aspx"><i class="fa fa-arrow-left text-black"></i></a>DISEASE

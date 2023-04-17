@@ -1,16 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/modules/module.master" AutoEventWireup="true" CodeBehind="hospital.aspx.cs" Inherits="hospitalproject.modules.hospital" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="nestedContent" runat="server">
    <div class="container border p-2 card ">
+       
+      
         <div class="row m-0 border p-0">
             <div class="col-md-12 p-2 bg-info border-0 fw-bold card-header">
                 <a href="moduledashboard.aspx"><i class="fa fa-arrow-left text-black"></i></a>HOSPITAL
             </div>
             <div class="col-md-12">
+               
                 <div class="row p-2">
                     <!--name-->
                     <div class="col-md-3">
                         Name<br />
-                        <asp:TextBox ID="hospitalname" required runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="hospitalname"  runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="col-md-3">
 
@@ -19,7 +22,7 @@
                     </div>
                     <div class="col-md-3">
                         Mobile Number
-                        <asp:TextBox ID="mobileno" required runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="mobileno"  runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <!--name end-->
                     <!--Contact  Email start-->
@@ -37,11 +40,11 @@
                     </div>
                     <div class="col-md-3">
                         Medical Council
-                        <asp:TextBox ID="medicalcouncil" required runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="medicalcouncil"  runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="col-md-3">
                         Medical Regno
-                        <asp:TextBox ID="medicalregno" required runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="medicalregno"  runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <!--Contact  Email end-->
                     <!--ADDRESS1-->
@@ -59,7 +62,7 @@
                     <!--COUNTRY-->
                     <div class="col-md-3">
                         Pincode
-                        <asp:TextBox ID="pincode" required runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="pincode"  runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="col-md-3">
                         City

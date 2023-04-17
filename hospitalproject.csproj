@@ -86,7 +86,10 @@
     <Content Include="support\css\style.css" />
     <Content Include="support\css\sweetalert.min.css" />
     <Content Include="support\fonts\fontawesome-webfont.svg" />
+    <Content Include="support\image\bg.jpeg" />
+    <Content Include="support\image\bg5.jpeg" />
     <Content Include="support\image\hospitallogo.jpg" />
+    <Content Include="support\image\indexbg.jpg" />
     <Content Include="support\image\login1.jpeg" />
     <Content Include="support\image\logo1.jpeg" />
     <Content Include="support\js\bootstrap.bundle.min.js" />
