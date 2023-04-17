@@ -42,13 +42,13 @@ namespace hospitalproject
         protected global::System.Web.UI.HtmlControls.HtmlImage logo;
 
         /// <summary>
-        /// hname control.
+        /// hospitalname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label hname;
+        protected global::System.Web.UI.WebControls.Label hospitalname;
 
         /// <summary>
         /// username control.

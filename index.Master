@@ -46,7 +46,7 @@
                         <img src="support/image/hospitallogo.jpg" runat="server" id="logo" height="60" width="70" />
                     </div>
                     <div class="col-md-6">
-                        <asp:Label ID="hname" CssClass="title" runat="server" Text="Hospital"></asp:Label>
+                        <asp:Label ID="hospitalname" CssClass="title" runat="server" Text="Hospital"></asp:Label>
 
                     </div>
                     <div class="col-md-2">
