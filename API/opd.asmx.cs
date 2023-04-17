@@ -21,10 +21,10 @@ namespace hospitalproject.API
     {
         TextInfo pcase = new CultureInfo("en-US", false).TextInfo;
         [WebMethod]
-        public DataTable opdregistrationsearch(string registrationid)
+        public DataTable opdregistrationsearch(string patientno,string patientname)
         {
             {
-                return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from opdregistration where registrationid like'" + registrationid + "'");
+                return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from opdregistration where patientno like'" + patientno + "' and patientname like'" + patientname + "'");
             }
         }
         [WebMethod]
@@ -62,14 +62,14 @@ namespace hospitalproject.API
         {
             return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select (prefix+seprator+RIGHT(padding+CAST(currentno+1 as varchar(" + length + "))," + length + "))PERSISTED,length,isauto from autono where  scheme='" + schemename + "'");
         }
-        [WebMethod]
-        public DataTable state()
-        {
-            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select state from state order by state");
-        }
         public void autonoplus(string scheme)
         {
             SqlHelper.ExecuteNonQuery(CommandType.Text, "update autono set currentno=currentno+1 where scheme='" + scheme + "' ");
+        }
+        [WebMethod]
+        public DataTable pdata(string patientno)
+        {
+            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from prescription where patientno like'" + patientno + "'");
         }
     }
 }

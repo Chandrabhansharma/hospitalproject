@@ -11,10 +11,10 @@
                  <div class="col-md-12" style="font-weight:900">PATIENT DETAILS:</div>
         <div class="row p-2">
              <div class="col-md-3">
-       Patient No.<br /><asp:DropDownList ID="patientno" runat="server" CssClass="form-control"></asp:DropDownList>
+       Patient No.<br /><asp:DropDownList ID="patientno" runat="server" ClientIDMode="Static" AutoPostBack="true" OnSelectedIndexChanged="patientno_SelectedIndexChanged" CssClass="form-control"></asp:DropDownList>
        </div>
             <div class="col-md-3">
-       Patient Name<br /><asp:DropDownList ID="patientname" runat="server" CssClass="form-control"></asp:DropDownList>
+       Patient Name<br /><asp:TextBox ID="patientname" runat="server" CssClass="form-control"></asp:TextBox>
        </div></div></div></div>
             <div class="col-md-12">
                   <div class="container border p-2 card">

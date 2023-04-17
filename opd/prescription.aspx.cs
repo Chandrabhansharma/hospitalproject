@@ -24,20 +24,12 @@ namespace hospitalproject.opd
                 grddata.DataSource = dt;
                 grddata.DataBind();
                 data();
-                dt = opddata.opdregistrationsearch("%");
+                dt = opddata.opdregistrationsearch("%","%");
                 patientno.DataSource = dt.DefaultView.ToTable(true, "patientno");
                 patientno.DataTextField = "patientno";
                 patientno.DataValueField = "patientno";
                 patientno.DataBind();
                 patientno.Items.Insert(0, "---Select---");
-
-                dt = opddata.opdregistrationsearch("%");
-                patientname.DataSource = dt.DefaultView.ToTable(true, "patientname");
-                patientname.DataTextField = "patientname";
-                patientname.DataValueField = "patientname";
-                patientname.DataBind();
-                patientname.Items.Insert(0, "---Select---");
-
             }
         }
         
@@ -50,9 +42,7 @@ namespace hospitalproject.opd
             try
             {
                
-                prescriptiondata.prescriptionsubmit(patientno.SelectedValue, patientname.SelectedValue,medicinename.Text,dosage.Text,duration.Text,testing.Text, avoid.Text, followup.Text);
-                // Response.Write("Save Successfully !!!");
-                // Response.Write("<script>alert('Data Save Successfully!!!');</script>");
+                prescriptiondata.prescriptionsubmit(patientno.SelectedValue, patientname.Text,medicinename.Text,dosage.Text,duration.Text,testing.Text, avoid.Text, followup.Text);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'prescription.aspx'})", true);
             }
             catch (Exception ex)
@@ -99,5 +89,17 @@ namespace hospitalproject.opd
             }
         }
 
+        protected void patientno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dt = opddata.pdata(patientno.SelectedValue);
+            if (dt.Rows.Count > 0)
+            {
+                patientname.Text = dt.Rows[0]["patientname"].ToString();
+            }
+            else
+            {
+                patientname.Text = "NULL";
+            }
+        }
     }
 }
