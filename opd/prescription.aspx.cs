@@ -24,9 +24,9 @@ namespace hospitalproject.opd
                 grddata.DataSource = dt;
                 grddata.DataBind();
                 data();
-                dt = opddata.opdregistrationsearch("%","%");
-                patientno.DataSource = dt.DefaultView.ToTable(true, "patientno");
-                patientno.DataTextField = "patientno";
+                dt = opddata.opdregistrationsearch2();
+                patientno.DataSource = dt;
+                patientno.DataTextField = "patientdata";
                 patientno.DataValueField = "patientno";
                 patientno.DataBind();
                 patientno.Items.Insert(0, "---Select---");
@@ -39,16 +39,16 @@ namespace hospitalproject.opd
         }
         protected void submit_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                
                 prescriptiondata.prescriptionsubmit(patientno.SelectedValue, patientname.Text,medicinename.Text,dosage.Text,duration.Text,testing.Text, avoid.Text, followup.Text);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'prescription.aspx'})", true);
-            }
-            catch (Exception ex)
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
+            //}
            
         }
         protected void grddata_RowCommand(object sender, GridViewCommandEventArgs e)

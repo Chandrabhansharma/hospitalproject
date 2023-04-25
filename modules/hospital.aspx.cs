@@ -60,14 +60,19 @@ namespace hospitalproject.modules
 
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
             }*/
-            try
-            {
-                //HiddenField  = this.Master.Master.FindControl("") as HiddenField;
+            //try
+            //{
+            //    //HiddenField  = this.Master.Master.FindControl("") as HiddenField;
 
                 dt = moduledata.chkhospital();
                 if (dt.Rows.Count > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " swal('Configuration', 'Data Already Exists !!!', 'warning')", true);
+                    if (logo.PostedFile.FileName != "")
+                    {
+                        logo.SaveAs(Server.MapPath("~/photo/Hospital" + hospitalname.Text + ".jpg"));
+                        logopath = "~/photo/Hospital" + hospitalname.Text + ".jpg";
+                    }
+                    moduledata.hospitalupdate(hospitalname.Text, slogan.Text, mobileno.Text, mobileno2.Text, emailid.Text, website.Text, medicalcouncil.Text, Convert.ToInt32(medicalregno.Text), address1.Text, address2.Text, city.Text, state.SelectedValue, country.Text, pincode.Text, logopath.ToString());
                 }
                 else
                 {
@@ -80,11 +85,11 @@ namespace hospitalproject.modules
 
                 }
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " swal('Configuration', 'Data Save Successfully !!! / Updated Successfully', 'success').then((value) => {window.location = 'hospital.aspx'})", true);
-            }
-            catch (Exception ex)
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " swal('Configuration', '" + ex.Message + "', 'error').then((value) => {window.location = 'error'})", true);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " swal('Configuration', '" + ex.Message + "', 'error').then((value) => {window.location = 'error'})", true);
+            //}
           
 
 

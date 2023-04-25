@@ -28,6 +28,13 @@ namespace hospitalproject.API
             }
         }
         [WebMethod]
+        public DataTable opdregistrationsearch2()
+        {
+            {
+                return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select patientno,(patientno+' - '+patientname+' - '+mobilenumber) as patientdata from opdregistration");
+            }
+        }
+        [WebMethod]
         public void opdregistrationsubmit(string patientno, string patientname, string age, string gender, string date, string mobilenumber, string mobilenumber2, string email, string address, string doctorname, string specialization, string visittype, string fee, string height, string weight, string bloodpressure, string temperature, string remark)
         {
             SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into opdregistration(patientno,patientname,age,gender,date,mobilenumber,mobilenumber2,email,address,doctorname,specialization,visittype,fee,height,weight,bloodpressure,temperature,remark) values('" + pcase.ToTitleCase(patientno) + "','" + patientname + "','" + age + "','" + gender + "','" + date + "','" + mobilenumber + "','" + mobilenumber2 + "','" + email + "','" + address + "', '" + doctorname + "', '" + specialization + "', '" + visittype + "', '" + fee + "', '" + height + "', '" + weight + "', '" + bloodpressure + "', '" + temperature + "', '" + remark + "')");
@@ -50,7 +57,7 @@ namespace hospitalproject.API
         [WebMethod]
         public void prescriptionsubmit(string patientno, string patientname,string medicinename,string dosage,string duration,string testing, string avoid, string followup)
         {
-            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into prescription(patientno,patientname,medicinename,doage,duration,testing,avoid,followup) values('" + pcase.ToTitleCase(patientno) + "','" + patientname + "','" + medicinename + "','" + dosage + "','" + duration + "','" + testing + "','" + avoid +  "','" + followup + "')");
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into prescription(patientno,patientname,medicinename,dosage,duration,testing,avoid,followup) values('" + pcase.ToTitleCase(patientno) + "','" + patientname + "','" + medicinename + "','" + dosage + "','" + duration + "','" + testing + "','" + avoid +  "','" + followup + "')");
         }
         [WebMethod]
         public void prescriptiondelete(string sn)
@@ -69,7 +76,7 @@ namespace hospitalproject.API
         [WebMethod]
         public DataTable pdata(string patientno)
         {
-            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from prescription where patientno like'" + patientno + "'");
+            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from opdregistration where patientno like'" + patientno + "'");
         }
     }
 }

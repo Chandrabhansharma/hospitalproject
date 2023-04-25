@@ -34,7 +34,11 @@ namespace hospitalproject.API
                 return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from hospital");
             }
         }
-
+        [WebMethod]
+        public DataTable login(string username, string password)
+        {
+            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from usermaster where username='" + username + "' and password='" + password + "'");
+        }
         [WebMethod]
         public void hospitalsave(string hospitalname, string slogan, string mobileno, string mobileno2, string emailid, string website, string medicalcouncil, int medicalregno, string address1, string address2, string city, string state, string country, string pincode, string logo)
         {
@@ -43,7 +47,7 @@ namespace hospitalproject.API
         [WebMethod]
         public void hospitalupdate(string hospitalname, string slogan, string mobileno, string mobileno2, string emailid, string website, string medicalcouncil, int medicalregno, string address1, string address2, string city, string state, string country, string pincode, string logo)
         {
-            SqlHelper.ExecuteNonQuery(CommandType.Text, "update hospial set hospitalname='"+hospitalname+ "', slogan='" + slogan + "',mobileno='" + mobileno + "',mobileno2='" +mobileno2 + "', emailid='" + emailid + "',website='" + website + "',medicalcouncil='" + medicalcouncil + "',medicalregno='" + medicalregno + "',address1='" + address1 + "', address2='" + address2 + "',pincode='" + pincode + "',city='" + city + "', state='" + state + "', country='" + country + "',logo='" + logo + "'");
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "update hospital set hospitalname='"+hospitalname+ "', slogan='" + slogan + "',mobileno='" + mobileno + "',mobileno2='" +mobileno2 + "', emailid='" + emailid + "',website='" + website + "',medicalcouncil='" + medicalcouncil + "',medicalregno='" + medicalregno + "',address1='" + address1 + "', address2='" + address2 + "',pincode='" + pincode + "',city='" + city + "', state='" + state + "', country='" + country + "',logo='" + logo + "'");
         }
 
         [WebMethod]

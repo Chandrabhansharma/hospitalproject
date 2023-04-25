@@ -11,7 +11,8 @@
                  <div class="col-md-12" style="font-weight:900">PATIENT DETAILS:</div>
         <div class="row p-2">
              <div class="col-md-3">
-       Patient No.<br /><asp:DropDownList ID="patientno" runat="server" ClientIDMode="Static" AutoPostBack="true" OnSelectedIndexChanged="patientno_SelectedIndexChanged" CssClass="form-control"></asp:DropDownList>
+       Patient No.<br />
+                 <asp:DropDownList ID="patientno" runat="server" ClientIDMode="Static" AutoPostBack="true" OnSelectedIndexChanged="patientno_SelectedIndexChanged" CssClass="form-control js-example-basic-single "></asp:DropDownList>
        </div>
             <div class="col-md-3">
        Patient Name<br /><asp:TextBox ID="patientname" runat="server" CssClass="form-control"></asp:TextBox>
@@ -42,18 +43,18 @@
                 <div class="col-md-2 mt-1"><br />
                      <asp:Button ID="submit" runat="server" Text="Submit" OnClick="submit_Click" CssClass="btn w-100 btn-success "/>
                          </div>
-             </div></div></div></div>
-    <div class="row m-0 p-0 border-0 fw-bold table-responsive card-body">
+             </div></div></div>
+    <div class="row m-0 p-0 border mt-1 fw-bold table-responsive card-body">
         <asp:GridView ID="grddata" GridLines="None" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="grddata_PreRender" OnRowCommand="grddata_RowCommand" HeaderStyle-BackColor="Teal" HeaderStyle-ForeColor="White" runat="server" CssClass="table table-hover table-bordered">
             <Columns>
                 <asp:BoundField HeaderText="Patient No." DataField="patientno" />
                 <asp:BoundField HeaderText="Patient Name" DataField="patientname" />
                 <asp:BoundField HeaderText="Medicine Name" DataField="medicinename" />
-                <asp:BoundField HeaderText="Dosage" DataField="dosage" />
-                <asp:BoundField HeaderText="Duration" DataField="duration" />
+                <asp:BoundField HeaderText="Dosage" DataField="dosage"  />
+                <asp:BoundField HeaderText="Duration" DataField="duration"  />
                 <asp:BoundField HeaderText="Testing" DataField="testing" />
                 <asp:BoundField HeaderText="Avoid" DataField="avoid" />
-                <asp:BoundField HeaderText="Followup" DataField="followup" />
+                <asp:BoundField HeaderText="Followup" DataField="followup" DataFormatString="{0:dd-MM-yyyy}" />
             
                <asp:TemplateField>
                     <ItemTemplate>

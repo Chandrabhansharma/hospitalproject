@@ -61,6 +61,10 @@
                        <asp:TextBox ID="password" required="password" TextMode="Password" runat="server" placeholder="Password" CssClass="form-control"></asp:TextBox>
                     
                   </div>
+                  <div class="form-outline mb-4">
+                       <asp:Label ID="erro" runat="server"></asp:Label>
+                    
+                  </div>
 
                   <div class="pt-1 mb-4">
                         <asp:Button ID="login" runat="server" Text="Login" CssClass="btn w-25 btn-success " OnClick="login_Click"/>
