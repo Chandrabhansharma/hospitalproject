@@ -11,7 +11,9 @@ namespace hospitalproject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["permission"].ToString() == "Admin")
+            try
+            {
+                if (Session["permission"].ToString() == "Admin")
             {
                 opd2.Visible = true;
                 module2.Visible = true;
@@ -25,6 +27,12 @@ namespace hospitalproject
             {
                 opd2.Visible = true;
                 module2.Visible = false;
+            }
+            }
+
+            catch (Exception ex)
+            {
+                Response.Redirect("~/Default.aspx", false);
             }
         }
     }
