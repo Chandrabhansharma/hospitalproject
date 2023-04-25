@@ -69,6 +69,24 @@ namespace hospitalproject
         protected global::System.Web.UI.WebControls.LinkButton logout;
 
         /// <summary>
+        /// module control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor module;
+
+        /// <summary>
+        /// opd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor opd;
+
+        /// <summary>
         /// sc control.
         /// </summary>
         /// <remarks>

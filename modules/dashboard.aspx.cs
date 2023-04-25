@@ -11,7 +11,21 @@ namespace hospitalproject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["permission"].ToString() == "Admin")
+            {
+                opd2.Visible = true;
+                module2.Visible = true;
+            }
+            if (Session["permission"].ToString() == "Dr")
+            {
+                opd2.Visible = true;
+                module2.Visible = false;
+            }
+            if (Session["permission"].ToString() == "User")
+            {
+                opd2.Visible = true;
+                module2.Visible = false;
+            }
         }
     }
 }
